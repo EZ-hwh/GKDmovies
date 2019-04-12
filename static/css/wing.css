@@ -3,7 +3,7 @@ ul {
   margin: 0;
   padding: 1;
   overflow: hidden;
-  background-color:  blue;
+  background: -moz-linear-gradient(left,blue, rgb(51, 184, 236));
 }
 
 li {
@@ -23,7 +23,8 @@ li a:hover {
 }
 
 .button {
-    display: inline-block;
+    float:right;
+    display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;

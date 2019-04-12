@@ -69,7 +69,7 @@ class Label(models.Model):
 		return self.movie_name	
 
 	
-class Comment(Models.Model):
+class Comment(models.Model):
 	movie_name = models.ForeignKey(Movie, on_delete=models.CASCADE)
 	user_name = models.ForeignKey(User, on_delete=models.CASCADE)
 	comment = models.TextField()
@@ -78,16 +78,16 @@ class Comment(Models.Model):
 	def __str__(self):
 		return self.movie_name + '-' + self.user_name
 	
-	
-class Friend(Models.Model):
+'''	
+class Friend(models.Model):
 	user_name1 = models.ForeignKey(User, on_delete=models.CASCADE)
 	user_name2 = models.ForeignKey(User, on_delete=models.CASCADE)
 	
 	def __str__(self):
 		return self.user_name1 + '-' + self.user_name2
+'''
 	
-	
-class Skim(Models.Model):
+class Skim(models.Model):
 	movie_name = models.ForeignKey(Movie, on_delete=models.CASCADE)
 	user_name = models.ForeignKey(User, on_delete=models.CASCADE)
 	skim_date = models.DateField()
