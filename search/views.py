@@ -16,7 +16,7 @@ def search(request):
         error_msg = '请输入关键词'
         return render(request, 'errors.html', {'error_msg': error_msg})
 
-    post_list = Actor.objects.filter(actor_name=q)
+    post_list = Actor.objects.filter(actor_name__icontains=q)
     return render(request, 'results.html', {'error_msg': error_msg,
                                                'post_list': post_list})
 

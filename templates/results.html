@@ -4,7 +4,7 @@
 
 {% for post in post_list %}
   <div>
-    在这里显示文章的相应信息
+    <p>{% print(post.actor_name) %}</p>
   </div>
 {% empty %}
   <div class="no-post">
