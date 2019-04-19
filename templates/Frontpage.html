@@ -1,37 +1,5 @@
-<!DOCTYPE html>
-<!--<html>
-    <head>
-        <meta charset="utf-8">
-        <title>GKD电影</title>
-        <meta name="author" content="hwh">
-        <link rel="stylesheet" href="static/css/wing.css" type="text/css" />
-    </head>
-    <body>
-        <!--<ul>
-            <li><a href="">主页</a></li>
-            <li><a href="#news">电影</a></li>
-            <li><a href="#contact">演员</a></li>
-            <li><a href="#about">导演</a></li>
-            <button class="button">search</button>
-        </ul>
-        <p>这是一条分割线</p>
-        <div class="text">safasd</div>
-
-        <div class="container">
-            <form action="" class="parent">
-                <input type="text">
-                <input type="button" value="百度一下">
-            </form>
-        </div>
-        
-        <div class="search d7">
-            <form>
-            <input type="text" placeholder="搜索从这里开始...">
-            <button type="submit"></button>
-            </form>
-        </div>
-</html>-->
-
+{% extends "base.html" %}
+{% block context %}
 <form method="get" action="/search/">
     {% csrf_token %}
     <input type="text" placeholder="search" name="index">
@@ -48,3 +16,4 @@
     </br><button type="submit" name="submit">login</button>
 	<button type="submit" name="submit">register</button>
 </form>
+{% endblock context %}

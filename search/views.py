@@ -30,9 +30,13 @@ def search(request):
         return render(request, 'search_director.html', {'error_msg': error_msg, 'post_list': post_list})	
 
 def actor(request):
-    return render(request, 'actor.html', {})
-    #latest_question_list = Question.objects.order_by('-pub_date')[:5]
-    #context = {'latest_question_list': latest_question_list}
+    q = request.GET.get('actor_name')
+    person = Actor.objects.get(actor_name=q)
+    if not person:
+        error_msg = '请输入关键词'
+        return render(request, 'errors.html', {'error_msg': error_msg})
+
+    return render(request, 'actor.html', {'person':person})
 	
 def movie(request):
 	return render(request, 'movie.html', {})
