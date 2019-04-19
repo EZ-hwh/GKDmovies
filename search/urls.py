@@ -5,7 +5,7 @@ import re
 app_name='search'
 urlpatterns = [
     path('', views.Frontpage, name='frontpage'),
-    path(r'^search/$', views.search, name='search'),
+    path('search/', views.search, name='search'),
     path('director/', views.Director, name='detail'),
     path('<int:question_id>/user/', views.User, name='results'),
 ]
