@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="static/css/wing.css" type="text/css" />
     </head>
     <body>
-        <ul>
+        <!--<ul>
             <li><a href="">主页</a></li>
             <li><a href="#news">电影</a></li>
             <li><a href="#contact">演员</a></li>
@@ -15,6 +15,25 @@
             <button class="button">search</button>
         </ul>
         <p>这是一条分割线</p>
-        <div class="text">safasd</div>
-    </body>
+        <div class="text">safasd</div>-->
+
+        <div class="container">
+            <form action="" class="parent">
+                <input type="text">
+                <input type="button" value="百度一下">
+            </form>
+        </div>
+        
+        <div class="search d7">
+            <form>
+            <input type="text" placeholder="搜索从这里开始...">
+            <button type="submit"></button>
+            </form>
+        </div>
 </html>
+
+<form method="get" action="/search/">
+    {% csrf_token %}
+    <input type="search" placeholder="搜索" required>
+    <button type="submit">搜索</button>
+</form>
