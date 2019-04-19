@@ -36,4 +36,15 @@
     {% csrf_token %}
     <input type="text" placeholder="search" name="index">
     <button type="submit" name="submit">搜索</button>
+	
+	</br>
+	<label><input name="person" type="radio" value="movie" />电影 </label>
+	<label><input name="person" type="radio" value="actor" />演员 </label>
+	<label><input name="person" type="radio" value="director" />导演 </label>
+	
+	</br>
+	</br><input type="text" placeholder="user" name="">
+	</br><input type="text" placeholder="password" name="">
+    </br><button type="submit" name="submit">login</button>
+	<button type="submit" name="submit">register</button>
 </form>

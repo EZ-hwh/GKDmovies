@@ -1,6 +1,6 @@
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-<form action="{% url /actor/?actor_name}" method="get">
+<form action="{% url /movie/?movie_name}" method="get">
 {% csrf_token %}
 	{% for choice in question.choice_set.all %}	<label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
 {% endfor %}
