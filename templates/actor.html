@@ -1,15 +1,36 @@
 {% extends "base.html" %}
 
-{% block context %}
-
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
+{% block context %}
+
+<style>
+    h1{
+        margin-top:70px;
+        margin-left:100px;
+        font-size: 40px;
+    }
+    .info li{
+        float:right;
+        right: 500px;
+        top: 70px;
+    }
+    .actorphoto {
+        margin-top: 30px;
+        margin-left: 100px;
+        width: 175px ;
+        height: 250px ;
+    }
+</style>
 <form action="/actor/?actor_name" method="get">
-{% csrf_token %}
-	<p>{{ actor.actor_name }}</p>
-	<p>{{ actor.actor_gender }}</p>
-	<p>{{ actor.actor_intro }}</p>
-    
+
+    <h1>{{ actor.actor_name }}</h1>
+    <img class='actorphoto' src="/static/media/{{actor.actor_photo}}" >
+    <div class='info'>
+    	<li>性别：{{ actor.actor_gender }}</li>
+        <li>简介：{{ actor.actor_intro }}</li>
+    </div>
+    <p>参演电影</p>
     {% for post in movie %}
     <div>
         </br><a href="/movie/?movie_name={{post.movie_name}}">{{post.movie_name}}</a>

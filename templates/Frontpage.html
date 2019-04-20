@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block context %}
 <form method="get" action="/search/">
-    {% csrf_token %}
+	{% csrf_token %}
     <input type="text" placeholder="search" name="index">
     <button type="submit" name="submit">搜索</button>
 	
@@ -10,9 +10,11 @@
 	<label><input name="person" type="radio" value="movie" />电影 </label>
 	<label><input name="person" type="radio" value="actor" />演员 </label>
 	<label><input name="person" type="radio" value="director" />导演 </label>
-	
+	<img src="/static/media/{{photo}}">{{photo}}
 	</br>
     </br><button type="submit" name="submit"><a href="/login">login</a></button>
 	</br><button type="submit" name="submit"><a href="/register">register</a></button>
+	</body>
 </form>
+
 {% endblock context %}

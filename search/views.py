@@ -1,11 +1,12 @@
 from django.http import HttpResponse,Http404
 from .models import *
 from django.shortcuts import render,get_object_or_404
+from django.conf import settings
 
 # Create your views here.
 
 def Frontpage(request):
-    return render(request, "Frontpage.html",{})
+    return render(request, "Frontpage.html",{'photo':'timg.jpeg'})
 
 def search(request):
     q = request.GET.get('index')
