@@ -7,7 +7,7 @@
 <form action="/movie/?movie_name" method="get">
 {% csrf_token %}
 	<p>{{ movie.movie_name }}</p>
-	<p>{{ movie.director_name }}</p>
+	<p><a href="/director/?director_name={{movie.director_name}}">{{movie.director_name}}</a></p>
 	<p>{{ movie.date }}</p>
     <p>{{ movie.synopsis }}</p>
     <!--<p>{{ movie.photo }}</p>-->
