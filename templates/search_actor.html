@@ -1,7 +1,17 @@
+{% extends "base.html" %}
 {% if error_msg %}
     <p>{{ error_msg }}</p>
 {% endif %}
 
+{% block search %}
+    <form method="get" action="/search/">
+        {% csrf_token %}
+        <input type="text" placeholder="search" name="index">
+        <button type="submit" name="submit">搜索</button>
+    </form>
+{% endblock search %}
+
+{% block context %}
 {% for post in post_list %}
   <div>
 	<a href="/actor/?actor_name={{post.actor_name}}">{{post.actor_name}}</a>
@@ -12,3 +22,4 @@
     没有搜索到符合条件的文章
   </div>
 {% endfor %}
+{% endblock context %}

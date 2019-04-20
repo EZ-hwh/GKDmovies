@@ -1,48 +1,31 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-{% load staticfiles %}
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>首页</title>
-
-    <script type="text/javascript" src="{% static "bootstrap/js/jquery-2.0.0.min.js" %}"> </script>
-    <script type="text/javascript" src="{% static "bootstrap/js/jquery-ui.js" %}"></script>
-    <link href="{% static "bootstrap/css/bootstrap-combined.min.css" %}" rel="stylesheet" media="screen" >
-    <script type="text/javascript" src="{% static "bootstrap/js/bootstrap.min.js" %}"s></script>
+<head>
+    <meta charset="UTF-8">
+    <title>GKDmovies</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" media="screen" type="text/css" href="{% static 'css/home.css' %}">
 </head>
-
 <body>
-<div class="container-fluid" id="LG">
-    <div class="row-fluid">
-        <img src="{% static "img/head1.png" %}" alt="返回主页">
-        <div class="span12" >
-        </div>
-    </div>
-
-    <div class="row-fluid">
-        <div class="span2">
-        </div>
-        <div class="span6">
-            <ul class="nav nav-tabs">
-                <li class="active">
-                    <a href="#">首页</a>
-                </li>
-                <li>
-                    <a href="#">资料</a>
-                </li>
-                <li >
-                    <a href="#">信息</a>
-                </li>
-            </ul>
-            {% block context %}
-            添加内容
-            {% endblock context %}
-        </div>
-        <div class="span4">
-        </div>
-    </div>
-</div>
+    <!--顶部导航栏-->
+    <header>
+        <!--顶部左侧导航-->
+        <ul class="left-ul">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">电影</a></li>
+            <li><a href="#">演员</a></li>
+            <li><a href="#">导演</a></li>
+        </ul>
+        <!--右侧导航-->
+        <ul class="right-ul">
+            <li><a href="#">下载豆瓣客户端</a></li>
+            <li>{% block search %}
+                搜索框
+            {% endblock search %}</li>
+        </ul>
+    </header>
+    {% block context %}
+    添加内容
+    {% endblock context %}
 </body>
 </html>
