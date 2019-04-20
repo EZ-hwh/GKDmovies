@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% if error_msg %}
+    <p>{{ error_msg }}</p>
+{% endif %}
+
+{% block search %}
+    <form method="get" action="/search/">
+        {% csrf_token %}
+        <input type="text" placeholder="search" name="index">
+        <button type="submit" name="submit">搜索</button>
+    </form>
+{% endblock search %}
+
+{% block context %}
+{% for post in actor_list %}
+  <div>
+    </br>演员
+	</br><a href="/actor/?actor_name={{post.actor_name}}">{{post.actor_name}}</a>
+  </div>
+{% empty %}
+  <div class="no-post">
+    没有搜索到符合条件的文章
+  </div>
+{% endfor %}
+
+{% for post in movie_list %}
+  <div>
+    </br>电影
+	</br><a href="/movie/?movie_name={{post.movie_name}}">{{post.movie_name}}</a>
+  </div>
+{% empty %}
+  <div class="no-post">
+    没有搜索到符合条件的文章
+  </div>
+{% endfor %}
+
+{% for post in director_list %}
+  <div>
+    </br>导演
+	</br><a href="/director/?director_name={{post.director_name}}">{{post.director_name}}</a>
+  </div>
+{% empty %}
+  <div class="no-post">
+    没有搜索到符合条件的文章
+  </div>
+{% endfor %}
+
+{% endblock context %}

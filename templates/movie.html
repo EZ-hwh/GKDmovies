@@ -1,8 +1,27 @@
+{% extends "base.html" %}
+
+{% block context %}
+
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-<form action="{% url /movie/?movie_name}" method="get">
+<form action="/movie/?movie_name" method="get">
 {% csrf_token %}
-	{% for choice in question.choice_set.all %}	<label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
-{% endfor %}
-<input type="submit" value="Vote">
+	<p>{{ movie.movie_name }}</p>
+	<p>{{ movie.director_name }}</p>
+	<p>{{ movie.date }}</p>
+    <p>{{ movie.synopsis }}</p>
+    <!--<p>{{ movie.photo }}</p>-->
+    
+    {% for post in actor %}
+    <div>
+        </br><a href="/actor/?actor_name={{post.actor_name}}">{{post.actor_name}}</a>
+    <div>
+    {% empty %}
+    <div class="no-post">
+        没有搜索到符合条件的文章
+    </div>
+    {% endfor %}
+    
 </form>
+
+{% endblock context %}

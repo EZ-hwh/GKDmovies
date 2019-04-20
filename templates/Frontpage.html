@@ -6,14 +6,13 @@
     <button type="submit" name="submit">搜索</button>
 	
 	</br>
+	<label><input name="person" type="radio" value="all" checked />全部 </label>
 	<label><input name="person" type="radio" value="movie" />电影 </label>
 	<label><input name="person" type="radio" value="actor" />演员 </label>
 	<label><input name="person" type="radio" value="director" />导演 </label>
 	
 	</br>
-	</br><input type="text" placeholder="user" name="user">
-	</br><input type="text" placeholder="password" name="password">
-    </br><button type="submit" name="submit">login</button>
-	<button type="submit" name="submit">register</button>
+    </br><button type="submit" name="submit"><a href="/login">login</a></button>
+	</br><button type="submit" name="submit"><a href="/register">register</a></button>
 </form>
 {% endblock context %}
