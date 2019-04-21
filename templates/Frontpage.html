@@ -6,7 +6,7 @@
 		background: #DABB52;
 		display: inline-block;
         margin-top: 200px;
-        margin-left: 300px;
+        margin-left: 250px;
         position: relative;
 	}
 	.d2 input, .d2 button {
@@ -23,14 +23,14 @@
 	.d2 button {
 		height: 50px;
 		width: 75px;
-		position: absolute;
-		top: 0px;
-		right: 0px;
 		background: #F15B42;
 		cursor: pointer;
 	}
 	.d2 button:before {
 		font-family: FontAwesome;
+		position: absolute;
+		top: 0px;
+		right: 0px;
 		color: #F9F0DA;
 		font-size: 20px;
 		font-weight: bold;
@@ -39,8 +39,8 @@
 <form method="get" action="/search/">
 	{% csrf_token %}
 	<div class='d2'>
-    	<input type="text" placeholder="search" id="index">
-    	<button type="submit" id="submit">搜索</button>
+    	<input type="text" placeholder="search" name="index">
+    	<button type="submit" name="submit">搜索</button>
 	</div>
 	</br>
 	<label><input name="person" type="radio" value="all" checked />全部 </label>
