@@ -15,8 +15,8 @@ def search(request):
     error_msg = ''
 
     if not q:
-        error_msg = '请输入关键词'
-        return render(request, 'errors.html', {'error_msg': error_msg})
+        #error_msg = '请输入关键词'
+        return render(request, 'Frontpage.html', {'error_msg': error_msg})
 		
     if p == 'all' or not p:
         actor_list = Actor.objects.filter(actor_name__contains=q)
@@ -71,4 +71,57 @@ def login(request):
     
 def register(request):
     return render(request, 'register.html', {})
+    
+def add_user(request):
+    user = request.GET.get('user')
+    password = request.GET.get('password')
+    password2 = request.GET.get('password2')
+    if not user :
+        message = '用户名不能为空！'
+        return render(request, 'register.html', {'message': message})
+    if not password or not password2 :
+        message = '密码不能为空！'
+        return render(request, 'register.html', {'message': message})
+    if password != password2 :
+        message = '两次密码输入不相符！'
+        return render(request, 'register.html', {'message': message})
+    
+    try :
+        q = User.objects.get(user_name=user)   
+    except User.DoesNotExist :
+        if password == password2 :
+            q = User()
+            q.user_name = user
+            q.password = password
+            q.save()
+            message = '注册成功！'
+            success = 'success'
+            return render(request, 'register.html', {'message': message, 'success':success})
+        
+    message = '该用户名已被使用！'
+    return render(request, 'register.html', {'message': message})
+    
+def check(request):
+    user = request.GET.get('user')
+    password = request.GET.get('password')
+    if not user :
+        message = '用户名不能为空！'
+        return render(request, 'login.html', {'message': message})
+    if not password :
+        message = '密码不能为空！'
+        return render(request, 'login.html', {'message': message})
+        
+    try :
+        q = User.objects.get(user_name=user)   
+    except User.DoesNotExist :
+        message = '用户不存在！'
+        return render(request, 'login.html', {'message': message})
+        
+    if q.password != password :
+        message = '密码错误！'
+        return render(request, 'login.html', {'message': message})
+    if q.password == password :
+        message = '登录成功！'
+        success = 'success'
+        return render(request, 'login.html', {'message': message,'success':success})
     
