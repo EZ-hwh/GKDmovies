@@ -1,16 +1,52 @@
 {% extends "base.html" %}
+
 {% block context %}
+<style>
+	.d2 {
+		background: #DABB52;
+		display: inline-block;
+        margin-top: 200px;
+        margin-left: 300px;
+        position: relative;
+	}
+	.d2 input, .d2 button {
+		border: none;
+		outline: none;
+		border-radius: 3px;
+	}
+	.d2 input {
+		width: 400px;
+		height: 50px;
+		background: #F9F0DA;
+		padding-left: 15px;
+	}
+	.d2 button {
+		height: 50px;
+		width: 75px;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		background: #F15B42;
+		cursor: pointer;
+	}
+	.d2 button:before {
+		font-family: FontAwesome;
+		color: #F9F0DA;
+		font-size: 20px;
+		font-weight: bold;
+	}
+</style>
 <form method="get" action="/search/">
 	{% csrf_token %}
-    <input type="text" placeholder="search" name="index">
-    <button type="submit" name="submit">搜索</button>
-	
+	<div class='d2'>
+    	<input type="text" placeholder="search" id="index">
+    	<button type="submit" id="submit">搜索</button>
+	</div>
 	</br>
 	<label><input name="person" type="radio" value="all" checked />全部 </label>
 	<label><input name="person" type="radio" value="movie" />电影 </label>
 	<label><input name="person" type="radio" value="actor" />演员 </label>
 	<label><input name="person" type="radio" value="director" />导演 </label>
-	<img src="/static/media/{{photo}}">{{photo}}
 	</br>
     </br><button type="submit" name="submit"><a href="/login">login</a></button>
 	</br><button type="submit" name="submit"><a href="/register">register</a></button>
