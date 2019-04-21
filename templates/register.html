@@ -9,5 +9,8 @@
     </br><input type="password" placeholder="repeat password" name="password2">
 	</br><button type="submit" name="submit">register</button>
     <p><span style="color: red;">{{ message }}</p>
+    {% if success %}
+        <meta http-equiv="refresh" content="1.5; url='/login/'"> 
+    {% endif %}    
 </form>
 {% endblock context %}

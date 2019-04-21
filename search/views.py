@@ -91,7 +91,8 @@ def add_user(request):
         q.password = password
         q.save()
         message = '注册成功！'
-        return render(request, 'register.html', {'message': message})
+        success = 'success'
+        return render(request, 'register.html', {'message': message, 'success':success})
     
 def check(request):
     user = request.GET.get('user')
@@ -114,5 +115,6 @@ def check(request):
         return render(request, 'login.html', {'message': message})
     if q.password == password :
         message = '登录成功！'
-        return render(request, 'login.html', {'message': message})
+        success = 'success'
+        return render(request, 'login.html', {'message': message,'success':success})
     
