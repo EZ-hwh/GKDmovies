@@ -14,5 +14,6 @@ urlpatterns = [
     path('director_all/', views.director_all, name='director_all'),
     path('login/', views.login, name='login'),
     path('register/', views.register, name='register'),
-    
+    path('add_user/', views.add_user, name='add_user'),
+    path('check/', views.check, name='check'),
 ]
