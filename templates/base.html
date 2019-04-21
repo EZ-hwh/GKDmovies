@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>GKDmovies</title>
     {% load staticfiles %}
-    <link rel="stylesheet" media="screen" type="text/css" href="{% static 'css/home.css' %}">
-</head>
+        <link rel="stylesheet" media="screen" type="text/css" href="{% static 'css/home.css' %}">
+    {% block css %}
+    {% endblock css %}
+    </head>
 <body>
     <!--顶部导航栏-->
     <header>

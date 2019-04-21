@@ -1,0 +1,50 @@
+#wrapper {
+    width: 800px;
+    margin: 0 auto;
+    border-left: 200px;
+    margin-top: 30px;
+}
+.content {
+    margin-top: 30px;
+}
+h1 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+#headline {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+#headline .pic {
+    width: 175px;
+    height: 250px;
+    float: left;
+    text-align: center;
+}
+#headline img {
+    height: 250px;
+    width: 175px;
+}
+.info {
+    float: left;
+    text-align: left;
+    line-height: 22px;
+}
+.info ul {
+    margin-left: 20px;
+}
+.info li {
+    width: 438px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+#intro{
+    margin-bottom: 25px;
+}
+#intro .hd {
+    margin-bottom: 10px;
+}
+#intro .bd {
+    margin-bottom: 20px;
+    overflow: hidden;
+}

@@ -2,31 +2,32 @@
 
 {% block context %}
 <style>
-	.d2 {
+	.d1 {
 		background: #DABB52;
 		display: inline-block;
         margin-top: 200px;
-        margin-left: 250px;
+        margin-left: 200px;
         position: relative;
 	}
-	.d2 input, .d2 button {
+	.d1 input, .d1 button {
 		border: none;
 		outline: none;
 		border-radius: 3px;
 	}
-	.d2 input {
+	.d1 input {
 		width: 400px;
 		height: 50px;
 		background: #F9F0DA;
 		padding-left: 15px;
 	}
-	.d2 button {
+	.d1 button {
+		position: relative;
 		height: 50px;
 		width: 75px;
 		background: #F15B42;
 		cursor: pointer;
 	}
-	.d2 button:before {
+	.d1 button:before {
 		font-family: FontAwesome;
 		position: absolute;
 		top: 0px;
@@ -38,15 +39,17 @@
 </style>
 <form method="get" action="/search/">
 	{% csrf_token %}
-	<div class='d2'>
-    	<input type="text" placeholder="search" name="index">
+	<div class='d1'>
     	<button type="submit" name="submit">搜索</button>
+    	<input type="text" placeholder="search" name="index">
 	</div>
 	</br>
-	<label><input name="person" type="radio" value="all" checked />全部 </label>
-	<label><input name="person" type="radio" value="movie" />电影 </label>
-	<label><input name="person" type="radio" value="actor" />演员 </label>
-	<label><input name="person" type="radio" value="director" />导演 </label>
+	<div>
+		<label><input name="person" type="radio" value="all" checked />全部 </label>
+		<label><input name="person" type="radio" value="movie" />电影 </label>
+		<label><input name="person" type="radio" value="actor" />演员 </label>
+		<label><input name="person" type="radio" value="director" />导演 </label>
+	</div>
 	</br>
     </br><button type="submit" name="submit"><a href="/login">login</a></button>
 	</br><button type="submit" name="submit"><a href="/register">register</a></button>
