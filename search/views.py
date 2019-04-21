@@ -54,6 +54,11 @@ def director(request):
     movie = Movie.objects.filter(director_name=q)
     return render(request, 'director.html', {'director': director, 'movie': movie})
 
+def user(request):
+    q = request.session['user_name']
+    user = User.objects.get(user_name=q)
+    return render(request, 'user.html', {'user': user})    
+ 
 def actor_all(request):
     actor_list = Actor.objects.all()
     return render(request, 'results.html', {'actor_list': actor_list})
@@ -68,6 +73,10 @@ def director_all(request):
 
 def login(request):
     return render(request, 'login.html', {})
+
+def logout(request):
+    request.session.flush()
+    return render(request, 'Frontpage.html', {}) 
     
 def register(request):
     return render(request, 'register.html', {})
@@ -123,5 +132,8 @@ def check(request):
     if q.password == password :
         message = '登录成功！'
         success = 'success'
+        request.session['login'] = True
+        request.session['user_name'] = user
+        request.session['password'] = password           
         return render(request, 'login.html', {'message': message,'success':success})
     

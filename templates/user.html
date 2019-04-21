@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block context %}
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="/user/?user_name" method="get">
+{% csrf_token %}
+	<p>{{ user.user_name }}</p>
+	<p>{{ user.signature }}</a></p>
+    <!--<p>{{ user.user_photo }}</p>-->
+    
+</form>
+
+{% endblock context %}

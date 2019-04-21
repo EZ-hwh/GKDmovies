@@ -20,6 +20,13 @@
         </ul>
         <!--右侧导航-->
         <ul class="right-ul">
+            {% if request.session.login %}
+                <li><a href="/user">{{request.session.user_name}}</a></li>
+                <li><a href="/logout">logout</a></li>   
+            {% else %}
+                <li><a href="/login">login</a></li>
+                <li><a href="/register">register</a></li>        
+            {% endif %}       
             <li><a href="#">下载豆瓣客户端</a></li>
             <li>{% block search %}
                 
