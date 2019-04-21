@@ -85,14 +85,21 @@ def add_user(request):
     if password != password2 :
         message = '两次密码输入不相符！'
         return render(request, 'register.html', {'message': message})
-    if password == password2 :
-        q = User()
-        q.user_name = user
-        q.password = password
-        q.save()
-        message = '注册成功！'
-        success = 'success'
-        return render(request, 'register.html', {'message': message, 'success':success})
+    
+    try :
+        q = User.objects.get(user_name=user)   
+    except User.DoesNotExist :
+        if password == password2 :
+            q = User()
+            q.user_name = user
+            q.password = password
+            q.save()
+            message = '注册成功！'
+            success = 'success'
+            return render(request, 'register.html', {'message': message, 'success':success})
+        
+    message = '该用户名已被使用！'
+    return render(request, 'register.html', {'message': message})
     
 def check(request):
     user = request.GET.get('user')
