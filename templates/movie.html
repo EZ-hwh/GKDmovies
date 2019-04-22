@@ -7,14 +7,46 @@
 <form action="/movie/?movie_name" method="get">
 {% csrf_token %}
 	<p>{{ movie.movie_name }}</p>
-	<p><a href="/director/?director_name={{movie.director_name}}">{{movie.director_name}}</a></p>
-	<p>{{ movie.date }}</p>
+	<p>{{ movie.movie_date }}</p>
     <p>{{ movie.synopsis }}</p>
     <!--<p>{{ movie.photo }}</p>-->
+    
+    {% for post in director %}
+    <div>
+        </br><a href="/director/?director_name={{post.director_name}}">{{movie.director_name}}</a>
+    <div>
+    {% empty %}
+    <div class="no-post">
+        没有搜索到符合条件的文章
+    </div>
+    {% endfor %}
     
     {% for post in actor %}
     <div>
         </br><a href="/actor/?actor_name={{post.actor_name}}">{{post.actor_name}}</a>
+    <div>
+    {% empty %}
+    <div class="no-post">
+        没有搜索到符合条件的文章
+    </div>
+    {% endfor %}
+    
+    {% for post in label %}
+    <div>
+        </br>{{post.label}}
+    <div>
+    {% empty %}
+    <div class="no-post">
+        没有搜索到符合条件的文章
+    </div>
+    {% endfor %}
+    
+    {% for post in comment %}
+    <div>
+        </br>{{comment.user_name}}
+        </br>{{comment.comment_date}}
+        </br>{{comment.grade}}
+        </br>{{comment.comment}}
     <div>
     {% empty %}
     <div class="no-post">

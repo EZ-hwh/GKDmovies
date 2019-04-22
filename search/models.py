@@ -4,44 +4,45 @@ import datetime
 from django.utils import timezone
 
 class Actor(models.Model):
-	actor_name = models.CharField(max_length=50, primary_key=True)
-	actor_intro = models.TextField()
-	actor_photo = models.ImageField(default="actorset/no_img.jpg",upload_to="actorset/")
-	gender_status = (
-		('m', 'male'),
-		('f', 'female'),
-	)
+    actor_name = models.CharField(max_length=50, primary_key=True)
+    actor_date = models.DateField(blank=True)
+    actor_intro = models.TextField()
+    actor_photo = models.ImageField(default="actorset/no_img.jpg",upload_to="actorset/")
+    gender_status = (
+        ('m', 'male'),
+        ('f', 'female'),
+    )
 	
-	actor_gender = models.CharField(max_length=1, choices=gender_status, blank=True)
+    actor_gender = models.CharField(max_length=1, choices=gender_status, blank=True)
 	
-	def __str__(self):
-		return self.actor_name	
+    def __str__(self):
+        return self.actor_name	
 		
 
 class Director(models.Model):
-	director_name = models.CharField(max_length=50, primary_key=True)
-	director_intro = models.TextField()
-	director_photo = models.ImageField(default="directorset/no_img.jpg",upload_to="directorset/")
-	gender_status = (
+    director_name = models.CharField(max_length=50, primary_key=True)
+    director_date = models.DateField(blank=True)
+    director_intro = models.TextField()
+    director_photo = models.ImageField(default="directorset/no_img.jpg",upload_to="directorset/")
+    gender_status = (
 		('m', 'male'),
 		('f', 'female'),
 	)
 	
-	director_gender = models.CharField(max_length=1, choices=gender_status, blank=True)
+    director_gender = models.CharField(max_length=1, choices=gender_status, blank=True)
 
-	def __str__(self):
-		return self.director_name	
+    def __str__(self):
+        return self.director_name	
 		
 	
 class Movie(models.Model):
-	movie_name = models.CharField(max_length=50, primary_key=True)
-	director_name = models.ForeignKey(Director, on_delete=models.CASCADE)
-	date = models.DateField(blank=True)
-	synopsis = models.TextField()
-	movie_photo = models.ImageField(default="movieset/no_img.jpg",upload_to="movieset/")
+    movie_name = models.CharField(max_length=50, primary_key=True)
+    movie_date = models.DateField(blank=True)
+    synopsis = models.TextField()
+    movie_photo = models.ImageField(default="movieset/no_img.jpg",upload_to="movieset/")
 	
-	def __str__(self):
-		return self.movie_name	
+    def __str__(self):
+        return self.movie_name	
 	
 	
 class User(models.Model):
@@ -52,7 +53,13 @@ class User(models.Model):
 	
 	def __str__(self):
 		return self.user_name	
+        
+class Direct(models.Model):
+    movie_name = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    director_name = models.ForeignKey(Director, on_delete=models.CASCADE)
 	
+    def __str__(self):
+        return self.movie_name + '-' + self.director_name	
 	
 class Play(models.Model):
 	movie_name = models.ForeignKey(Movie, on_delete=models.CASCADE)

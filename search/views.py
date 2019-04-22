@@ -19,21 +19,21 @@ def search(request):
         return render(request, 'Frontpage.html', {'error_msg': error_msg})
 		
     if p == 'all' or not p:
-        actor_list = Actor.objects.filter(actor_name__contains=q)
-        movie_list = Movie.objects.filter(movie_name__contains=q)
-        director_list = Director.objects.filter(director_name__contains=q)
+        actor_list = Actor.objects.filter(actor_name__contains=q).order_by('actor_name')
+        movie_list = Movie.objects.filter(movie_name__contains=q).order_by('movie_name')
+        director_list = Director.objects.filter(director_name__contains=q).order_by('director_name')
         return render(request, 'results.html', {'error_msg': error_msg, 'actor_list': actor_list , 'movie_list': movie_list , 'director_list': director_list})
 
     if p == 'actor' :
-        actor_list = Actor.objects.filter(actor_name__contains=q)
+        actor_list = Actor.objects.filter(actor_name__contains=q).order_by('actor_name')
         return render(request, 'results.html', {'error_msg': error_msg, 'actor_list': actor_list})
     
     if p == 'movie' :
-        movie_list = Movie.objects.filter(movie_name__contains=q)
+        movie_list = Movie.objects.filter(movie_name__contains=q).order_by('movie_name')
         return render(request, 'results.html', {'error_msg': error_msg, 'movie_list': movie_list})
 
     if p == 'director' :
-        director_list = Director.objects.filter(director_name__contains=q)
+        director_list = Director.objects.filter(director_name__contains=q).order_by('director_name')
         return render(request, 'results.html', {'error_msg': error_msg, 'director_list': director_list})
 	
 def actor(request):
@@ -46,7 +46,9 @@ def movie(request):
     q = request.GET.get('movie_name')
     movie = Movie.objects.get(movie_name=q)
     actor = Play.objects.filter(movie_name=q)
-    return render(request, 'movie.html', {'actor': actor, 'movie': movie})
+    label = Label.objects.filter(movie_name=q)
+    comment = Comment.objects.filter(movie_name=q).order_by('-comment_date')
+    return render(request, 'movie.html', {'actor': actor, 'movie': movie, 'label': label, 'comment': comment})
 
 def director(request):
     q = request.GET.get('director_name')
