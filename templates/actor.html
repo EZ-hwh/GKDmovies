@@ -8,7 +8,7 @@
 {% endblock css %}
 
 {% block context %}
-
+<form action="/actor/?actor_name" method="get">
     <div id='wrapper'>
         <h1>{{actor.actor_name}}</h1>
         <div id='headline'>
@@ -29,19 +29,20 @@
                 <span class='short'>{{actor.actor_intro}}</span>
             </div>
         </div>
-        <p>参演电影</p>
-        {% for post in movie %}
-        <div>
-            </br><a href="/movie/?movie_name={{post.movie_name}}">{{post.movie_name}}</a>
-        </div>
-        {% empty %}
-        <div class="no-post">
-            没有搜索到符合条件的文章
+        <div id='movies'>
+            <p>参演电影</p>
+            {% for post in movie %}
+            <div>
+                </br><a href="/movie/?movie_name={{post.movie_name}}">{{post.movie_name}}</a>
+            </div>
+            {% empty %}
+            <div class="no-post">
+                没有搜索到符合条件的文章
+            </div>
         </div>
         {% endfor %}
     </div>
 
-<form action="/actor/?actor_name" method="get">
 </form>
 
 {% endblock context %}

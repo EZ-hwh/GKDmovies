@@ -38,7 +38,7 @@ h1 {
     word-wrap: break-word;
     overflow: hidden;
 }
-#intro{
+#intro, #movie{
     margin-bottom: 25px;
 }
 #intro .hd {

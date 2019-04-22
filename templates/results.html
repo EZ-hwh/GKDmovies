@@ -38,22 +38,41 @@
     </div>
   {% endfor %}
 
-  {% for post in movie_list %}
-    <div>
-      </br>电影
-    </br><a href="/movie/?movie_name={{post.movie_name}}">{{post.movie_name}}</a>
+  
+  <div class='classcification'>导演</div>
+  {% for post in director_list %}
+  <div class='item-root'>
+    <a href="/director/?director_name={{post.director_name}}" class='cover-link'>
+      <img src="/static/media/{{post.director_photo}}" class='cover'>
+    </a>
+    <div class='detail'>
+      <div class='title'>
+        <a href="/director/?director_name={{post.director_name}}">{{post.director_name}}</a>
+      </div>
+      <div>{{post.director_gender}}</div>
+      <div>{{post.director_intro}}</div>
     </div>
+  </div>
   {% empty %}
     <div class="no-post">
       没有搜索到符合条件的文章
     </div>
   {% endfor %}
 
-  {% for post in director_list %}
-    <div>
-      </br>导演
-    </br><a href="/director/?director_name={{post.director_name}}">{{post.director_name}}</a>
+  <div class='classcification'>电影</div>
+  {% for post in movies_list %}
+  <div class='item-root'>
+    <a href="/movies/?movies_name={{post.movies_name}}" class='cover-link'>
+      <img src="/static/media/{{post.movies_photo}}" class='cover'>
+    </a>
+    <div class='detail'>
+      <div class='title'>
+        <a href="/movies/?movies_name={{post.movies_name}}">{{post.movies_name}}</a>
+      </div>
+      <!--<div>{{post.actor_gender}}</div>
+      <div>{{post.actor_intro}}</div>-->
     </div>
+  </div>
   {% empty %}
     <div class="no-post">
       没有搜索到符合条件的文章
