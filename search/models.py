@@ -5,7 +5,11 @@ from django.utils import timezone
 
 class Actor(models.Model):
     actor_name = models.CharField(max_length=50, primary_key=True)
-    #actor_date = models.DateField(blank=True,null=True)
+    actor_date = models.CharField(max_length=50,blank=True,null=True)
+    constellation = models.TextField(blank=True)
+    birthplace = models.TextField(blank=True)
+    occupation = models.TextField(blank=True)
+    website = models.TextField(blank=True)
     actor_intro = models.TextField()
     actor_photo = models.ImageField(default="actorset/no_img.jpg",upload_to="actorset/")
     gender_status = (
@@ -21,7 +25,11 @@ class Actor(models.Model):
 
 class Director(models.Model):
     director_name = models.CharField(max_length=50, primary_key=True)
-    #director_date = models.DateField(blank=True,null=True)
+    director_date = models.CharField(max_length=50,blank=True,null=True)
+    constellation = models.TextField(blank=True)
+    birthplace = models.TextField(blank=True)
+    occupation = models.TextField(blank=True)
+    website = models.TextField(blank=True)
     director_intro = models.TextField()
     director_photo = models.ImageField(default="directorset/no_img.jpg",upload_to="directorset/")
     gender_status = (
@@ -37,8 +45,14 @@ class Director(models.Model):
 	
 class Movie(models.Model):
     movie_name = models.CharField(max_length=50, primary_key=True)
-    movie_date = models.DateField(blank=True)
+    movie_date = models.CharField(max_length=50,blank=True,null=True)
     synopsis = models.TextField()
+    type = models.TextField()
+    place = models.TextField()
+    language = models.TextField()
+    length = models.TextField()
+    rename = models.TextField()
+    
     movie_photo = models.ImageField(default="movieset/no_img.jpg",upload_to="movieset/")
 	
     def __str__(self):
