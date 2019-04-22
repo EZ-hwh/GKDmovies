@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 
-{% block context %}
-
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% block context %}
 
 <form action="/movie/?movie_name" method="get">
 {% csrf_token %}
-	<p>{{ movie.movie_name }}</p>
-	<p>{{ movie.movie_date }}</p>
+	<p><a name="movie">{{ movie.movie_name }}</a></p>
     <p>{{ movie.synopsis }}</p>
     <!--<p>{{ movie.photo }}</p>-->
     
@@ -53,6 +52,24 @@
         没有搜索到符合条件的文章
     </div>
     {% endfor %}
+    
+    {% if request.session.login %}
+        <label><input name="score" type="radio" value=5 checked />5</label>
+        <label><input name="score" type="radio" value=4 />4 </label>
+        <label><input name="score" type="radio" value=3 />3 </label>
+        <label><input name="score" type="radio" value=2 />2 </label>
+        <label><input name="score" type="radio" value=1 />1 </label>    
+        {% if not n_exist %}
+            </br><textarea rows="10" cols="30" placeholder="请在此输入评论" name="comment"></textarea>
+            <button type="submit" name="submit"><a href="/add_comment">提交</button>
+        {% else %}
+            </br><textarea rows="10" cols="30" name="comment">{{comment.comment}}</textarea>
+            <button type="submit" name="submit"><a href="/delete_comment">删除</button>
+            <button type="submit" name="submit"><a href="/modify_comment">修改</button>
+        {% endif %}
+    {% else %}
+        <p><span style="color: red;">请先登录！</p>   
+    {% endif %}
     
 </form>
 

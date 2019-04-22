@@ -60,14 +60,14 @@
   {% endfor %}
 
   <div class='classcification'>电影</div>
-  {% for post in movies_list %}
+  {% for post in movie_list %}
   <div class='item-root'>
-    <a href="/movies/?movies_name={{post.movies_name}}" class='cover-link'>
-      <img src="/static/media/{{post.movies_photo}}" class='cover'>
+    <a href="/movie/?movie_name={{post.movie_name}}" class='cover-link'>
+      <img src="/static/media/{{post.movie_photo}}" class='cover'>
     </a>
     <div class='detail'>
       <div class='title'>
-        <a href="/movies/?movies_name={{post.movies_name}}">{{post.movies_name}}</a>
+        <a href="/movie/?movie_name={{post.movie_name}}">{{post.movie_name}}</a>
       </div>
       <!--<div>{{post.actor_gender}}</div>
       <div>{{post.actor_intro}}</div>-->

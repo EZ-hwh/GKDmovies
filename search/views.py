@@ -42,12 +42,23 @@ def actor(request):
     movie = Play.objects.filter(actor_name=q)
     return render(request, 'actor.html', {'actor': actor, 'movie': movie})
 
-def movie(request):
+def movie(request): #wrong
+    return render(request, "movie.html",{})
     q = request.GET.get('movie_name')
     movie = Movie.objects.get(movie_name=q)
     actor = Play.objects.filter(movie_name=q)
     label = Label.objects.filter(movie_name=q)
     comment = Comment.objects.filter(movie_name=q).order_by('-comment_date')
+    
+    if not request.session['login'] :
+        return render(request, 'movie.html', {'actor': actor, 'movie': movie, 'label': label, 'comment': comment})
+    
+    try :
+        x = Comment.objects.get(user_name=request.session['user_name'])   
+    except User.DoesNotExist :
+        n_exist = True
+        return render(request, 'movie.html', {'actor': actor, 'movie': movie, 'label': label, 'comment': comment, 'n_exist': n_exist})
+    
     return render(request, 'movie.html', {'actor': actor, 'movie': movie, 'label': label, 'comment': comment})
 
 def director(request):
@@ -138,4 +149,33 @@ def check(request):
         request.session['user_name'] = user
         request.session['password'] = password           
         return render(request, 'login.html', {'message': message,'success':success})
+
+def add_comment(request): #wrong
+    movie = request.GET.get('movie')
+    grade = request.GET.get('score')
+    comment = request.GET.get('comment')
+    q = Comment()
+    q.movie_name = movie
+    return render(request, "Frontpage.html",{'photo':'timg.jpeg'})
+    q.user_name = request.session['user_name']
+    q.grade = grade 
+    q.comment = comment
     
+    q.save()
+    return redirect("movie")
+
+def delete_comment(request): #wrong
+    movie =  request.GET.get('movie')
+    user = request.session['user_name']
+    q = Comment.objects.get(movie_name=movie, user_name=user)
+    q.delete()
+    return redirect("movie")
+
+def modify_comment(request): #wrong
+    movie =  request.GET.get('movie')
+    user = request.session['user_name']
+    new_grade = request.GET.get('score')
+    new_comment = request.GET.get('comment')
+    q = Comment.objects.get(movie_name=movie, user_name=user)
+    q.update(comment=new_comment,grade=new_grade)
+    return redirect("movie")

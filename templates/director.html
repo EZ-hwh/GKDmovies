@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
-{% block context %}
-
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% block context %}
 
 <form action="/director/?director_name" method="get">
 {% csrf_token %}

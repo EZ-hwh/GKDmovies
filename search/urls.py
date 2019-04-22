@@ -18,4 +18,7 @@ urlpatterns = [
     path('user/', views.user, name='user'),
     path('add_user/', views.add_user, name='add_user'),
     path('check/', views.check, name='check'),
+    path('add_comment/', views.add_comment, name='add_comment'),
+    path('delete_comment/', views.delete_comment, name='delete_comment'),
+    path('modify_comment/', views.modify_comment, name='modify_comment'),
 ]
