@@ -5,7 +5,7 @@ from django.utils import timezone
 
 class Actor(models.Model):
     actor_name = models.CharField(max_length=50, primary_key=True)
-    actor_date = models.DateField(blank=True)
+    #actor_date = models.DateField(blank=True)
     actor_intro = models.TextField()
     actor_photo = models.ImageField(default="actorset/no_img.jpg",upload_to="actorset/")
     gender_status = (
@@ -21,7 +21,7 @@ class Actor(models.Model):
 
 class Director(models.Model):
     director_name = models.CharField(max_length=50, primary_key=True)
-    director_date = models.DateField(blank=True)
+    #director_date = models.DateField(blank=True)
     director_intro = models.TextField()
     director_photo = models.ImageField(default="directorset/no_img.jpg",upload_to="directorset/")
     gender_status = (
