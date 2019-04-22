@@ -13,7 +13,9 @@ urlpatterns = [
 	path('movie_all/', views.movie_all, name='movie_all'),
     path('director_all/', views.director_all, name='director_all'),
     path('login/', views.login, name='login'),
+    path('logout/', views.logout, name='logout'),
     path('register/', views.register, name='register'),
+    path('user/', views.user, name='user'),
     path('add_user/', views.add_user, name='add_user'),
     path('check/', views.check, name='check'),
 ]
