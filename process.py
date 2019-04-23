@@ -58,7 +58,6 @@ def movie():
                         detail = info.get_text()
                         type=''
                         language=''
-                        movie_name=''
                         intro=''
                         place=''
                         length=''
