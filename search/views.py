@@ -153,6 +153,7 @@ def check(request):
         return render(request, 'login.html', {'message': message,'success':success})
 
 def add_comment(request): #wrong
+    
     q = request.GET.get('movie_name')
     p = request.session.get('user_name',None)
     grade = request.GET.get('score')
@@ -162,8 +163,9 @@ def add_comment(request): #wrong
     
     movie = Movie.objects.get(movie_name=q)   
     user = User.objects.get(user_name=p)
-    Comment.objects.create(movie_name=movie,user_name=p,grade=grade,comment=comment)
-    return redirect('/movie/?movie_name=%s' % (movie)) 
+    Comment.objects.create(movie_name=movie,user_name=user,grade=grade,comment=comment)
+    
+    return redirect('/movie/?movie_name=%s' % (movie.movie_name)) 
     
 
     

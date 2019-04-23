@@ -57,7 +57,7 @@ class Movie(models.Model):
 class User(models.Model):
 	user_name = models.CharField(max_length=50, primary_key=True)
 	password = models.CharField(max_length=50)
-	signature = models.TextField()
+	signature = models.TextField(blank=True,null=True)
 	user_photo = models.ImageField(default="userset/no_img.jpg",upload_to="userset/")
 	
         
@@ -83,7 +83,7 @@ class Label(models.Model):
 class Comment(models.Model):
 	movie_name = models.ForeignKey(Movie, on_delete=models.CASCADE)
 	user_name = models.ForeignKey(User, on_delete=models.CASCADE)
-	comment = models.TextField()
+	comment = models.TextField(blank=True,null=True)
 	grade = models.IntegerField(blank=True)
 	
 

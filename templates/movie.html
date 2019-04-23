@@ -4,7 +4,6 @@
 
 {% block context %}
 
-<form action="/movie/?movie_name" method="get">
 {% csrf_token %}
 
 	</br><p>{{ movie.movie_name }}</p>
@@ -33,7 +32,7 @@
     
     {% for post in comment %}
     <div>
-        </br><p>{{post.user_name}}</p>
+        </br><p>{{post.user_name.user_name}}</p>
         </br><p>{{post.grade}}</p>
         </br><p>{{post.comment}}</p>
     </div>
@@ -44,14 +43,22 @@
     {% endfor %}
    
     {% if request.session.login %}
-        <label><input name="score" type="radio" value=5 checked />5</label>
+        <!--<label><input name="score" type="radio" value=5 checked />5</label>
         <label><input name="score" type="radio" value=4 />4 </label>
         <label><input name="score" type="radio" value=3 />3 </label>
         <label><input name="score" type="radio" value=2 />2 </label>
-        <label><input name="score" type="radio" value=1 />1 </label>    
+        <label><input name="score" type="radio" value=1 />1 </label>    -->
         {% if n_exist %}
+        <form action="/add_comment/",method='get'>
+            <label><input name="score" type="radio" value=5 checked />5</label>
+            <label><input name="score" type="radio" value=4 />4 </label>
+            <label><input name="score" type="radio" value=3 />3 </label>
+            <label><input name="score" type="radio" value=2 />2 </label>
+            <label><input name="score" type="radio" value=1 />1 </label> 
             </br><textarea rows="10" cols="30" placeholder="请在此输入评论" name="comment"></textarea>
-            <button type="submit" name="submit"><a href="/add_comment/?movie_name={{movie.movie_name}}">提交</a></button>
+            <input type="text" name="movie_name" style="display:none" value={{movie.movie_name}}></input>
+            <button type="submit" name="submit">提交</button>
+        </form>
         {% else %}
             </br><textarea rows="10" cols="30" name="comment">{{comment.comment}}</textarea>
             <button type="submit" name="submit"><a href="/delete_comment/?movie_name={{movie.movie_name}}">删除</a></button>
@@ -60,7 +67,8 @@
     {% else %}
         <p><span style="color: red;">请先登录！</p>   
     {% endif %}
-    
+
+<form action="/movie/?movie_name" method="get">    
 </form>
 
 {% endblock context %}
