@@ -11,37 +11,31 @@ def Frontpage(request):
 
 def search(request):
     q = request.GET.get('index')
-    p = request.GET.get('person')
-
-    error_msg = ''
+    p = request.GET.get('state')
 
     if not q:
-        #error_msg = '请输入关键词'
-        return render(request, 'Frontpage.html', {'error_msg': error_msg})
+        return render(request, 'Frontpage.html', {})
 		
     if p == 'all' or not p:
-        actor_list = Actor.objects.filter(actor_name__contains=q).order_by('actor_name')
+        person_list = Person.objects.filter(name__contains=q).order_by('name')
         movie_list = Movie.objects.filter(movie_name__contains=q).order_by('movie_name')
-        director_list = Director.objects.filter(director_name__contains=q).order_by('director_name')
-        return render(request, 'results.html', {'error_msg': error_msg, 'actor_list': actor_list , 'movie_list': movie_list , 'director_list': director_list})
+        return render(request, 'results.html', {'person_list': person_list , 'movie_list': movie_list})
 
-    if p == 'actor' :
-        actor_list = Actor.objects.filter(actor_name__contains=q).order_by('actor_name')
-        return render(request, 'results.html', {'error_msg': error_msg, 'actor_list': actor_list})
+    if p == 'person' :
+        person_list = Person.objects.filter(name__contains=q).order_by('name')
+        return render(request, 'results.html', {'person_list': person_list})
     
     if p == 'movie' :
         movie_list = Movie.objects.filter(movie_name__contains=q).order_by('movie_name')
-        return render(request, 'results.html', {'error_msg': error_msg, 'movie_list': movie_list})
-
-    if p == 'director' :
-        director_list = Director.objects.filter(director_name__contains=q).order_by('director_name')
-        return render(request, 'results.html', {'error_msg': error_msg, 'director_list': director_list})
+        return render(request, 'results.html', {'movie_list': movie_list})
+  
 	
-def actor(request):
-    q = request.GET.get('actor_name')
-    actor = Actor.objects.get(actor_name=q)
-    movie = Play.objects.filter(actor_name=q)
-    return render(request, 'actor.html', {'actor': actor, 'movie': movie})
+def person(request):
+    q = request.GET.get('person_name')
+    person = Person.objects.get(person_name=q)    
+    movie_d = Direct.objects.filter(person_name=q)
+    movie_a = Play.objects.filter(person_name=q)
+    return render(request, 'person.html', {'person': person, 'movie_d': movie_d, 'movie_a':movie_a})
 
 def movie(request): 
     q = request.GET.get('movie_name')
@@ -56,36 +50,26 @@ def movie(request):
     if not login:
         return render(request, 'movie.html', {'actor': actor, 'director': director, 'movie': movie, 'comment': comment})
         
-    if Comment.objects.filter(user_name=user) : 
-        return render(request, 'movie.html', {'actor': actor, 'director': director, 'movie': movie, 'comment': comment})
+    if Comment.objects.filter(user_name=user,movie_name=movie) : 
+        uc = Comment.objects.get(user_name=user,movie_name=movie)
+        return render(request, 'movie.html', {'actor': actor, 'director': director, 'movie': movie, 'comment': comment, 'uc': uc})
     
     n_exist = True   
     return render(request, 'movie.html', {'actor': actor, 'director': director, 'movie': movie, 'comment': comment, 'n_exist': n_exist})  
     
-    
-
-def director(request):
-    q = request.GET.get('director_name')
-    director = Director.objects.get(director_name=q)
-    movie = Movie.objects.filter(director_name=q)
-    return render(request, 'director.html', {'director': director, 'movie': movie})
 
 def user(request):
     q = request.session['user_name']
     user = User.objects.get(user_name=q)
     return render(request, 'user.html', {'user': user})    
  
-def actor_all(request):
-    actor_list = Actor.objects.all()
-    return render(request, 'results.html', {'actor_list': actor_list})
+def person_all(request):
+    person_list = Person.objects.all()
+    return render(request, 'results.html', {'person_list': person_list})
 	
 def movie_all(request):
     movie_list = Movie.objects.all()
     return render(request, 'results.html', {'movie_list': movie_list})
-    
-def director_all(request):
-    director_list = Director.objects.all()
-    return render(request, 'results.html', {'director_list': director_list})
 
 def login(request):
     return render(request, 'login.html', {})

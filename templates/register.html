@@ -7,11 +7,10 @@
 	</br><input type="text" placeholder="user" name="user">
 	</br><input type="password" placeholder="password" name="password">
     </br><input type="password" placeholder="repeat password" name="password2">
-    </br><button type="submit" name="submit"><a href="/login">login</a></button>
 	</br><button type="submit" name="submit">register</button>
     <p><span style="color: red;">{{ message }}</p>
     {% if success %}
-        <meta http-equiv="refresh" content="1.5; url='/login/'"> 
+        <meta http-equiv="refresh" content="1; url='/login/'"> 
     {% endif %}    
 </form>
 {% endblock context %}

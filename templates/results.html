@@ -18,39 +18,16 @@
 
 {% block context %}
 <div id='wrapper'>
-  <div class='classcification'>演员</div>
-  {% for post in actor_list %}
+  <div class='classcification'>演员/导演</div>
+  {% for post in person_list %}
   <div class='item-root'>
-    <a href="/actor/?actor_name={{post.actor_name}}" class='cover-link'>
-      <img src="/static/media/{{post.actor_photo}}" class='cover'>
+    <a href="/person/?aperson_name={{post.name}}" class='cover-link'>
+      <img src="/static/media/{{post.person_photo}}" class='cover'>
     </a>
     <div class='detail'>
       <div class='title'>
-        <a href="/actor/?actor_name={{post.actor_name}}">{{post.actor_name}}</a>
+        <a href="/person/?person_name={{post.name}}">{{post.name}}</a>
       </div>
-      <div>{{post.actor_gender}}</div>
-      <div>{{post.actor_intro}}</div>
-    </div>
-  </div>
-  {% empty %}
-    <div class="no-post">
-      没有搜索到符合条件的文章
-    </div>
-  {% endfor %}
-
-  
-  <div class='classcification'>导演</div>
-  {% for post in director_list %}
-  <div class='item-root'>
-    <a href="/director/?director_name={{post.director_name}}" class='cover-link'>
-      <img src="/static/media/{{post.director_photo}}" class='cover'>
-    </a>
-    <div class='detail'>
-      <div class='title'>
-        <a href="/director/?director_name={{post.director_name}}">{{post.director_name}}</a>
-      </div>
-      <div>{{post.director_gender}}</div>
-      <div>{{post.director_intro}}</div>
     </div>
   </div>
   {% empty %}
@@ -73,8 +50,6 @@
         </br>
         <a>{{post.intro}}</a>
       </div>
-      <!--<div>{{post.actor_gender}}</div>
-      <div>{{post.actor_intro}}</div>-->
     </div>
   </div>
   {% empty %}
