@@ -18,8 +18,6 @@ class Person(models.Model):
 	
     gender = models.CharField(max_length=1, choices=gender_status, blank=True)
 	
-    def __str__(self):
-        return self.actor_name	
 		
 '''
 class Director(models.Model):
@@ -54,8 +52,6 @@ class Movie(models.Model):
     
     photo = models.ImageField(default="movieset/no_img.jpg",upload_to="movieset/")
 	
-    def __str__(self):
-        return self.movie_name	
 	
 	
 class User(models.Model):
@@ -64,22 +60,16 @@ class User(models.Model):
 	signature = models.TextField()
 	user_photo = models.ImageField(default="userset/no_img.jpg",upload_to="userset/")
 	
-	def __str__(self):
-		return self.user_name	
         
 class Direct(models.Model):
     movie_name = models.ForeignKey(Movie, on_delete=models.CASCADE)
     director_name = models.ForeignKey(Person, on_delete=models.CASCADE)
 	
-    def __str__(self):
-        return self.movie_name + '-' + self.director_name	
 	
 class Play(models.Model):
 	movie_name = models.ForeignKey(Movie, on_delete=models.CASCADE)
 	actor_name = models.ForeignKey(Person, on_delete=models.CASCADE)
 	
-	def __str__(self):
-		return self.movie_name + '-' + self.actor_name	
 	
 '''	
 class Label(models.Model):
@@ -96,8 +86,6 @@ class Comment(models.Model):
 	comment = models.TextField()
 	grade = models.IntegerField(blank=True)
 	
-	def __str__(self):
-		return self.movie_name + '-' + self.user_name
 
 '''
 class Skim(models.Model):
