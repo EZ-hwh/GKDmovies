@@ -1,24 +1,43 @@
 from bs4 import BeautifulSoup
 import urllib.request
+chaper_url='https://movie.douban.com/celebrity/1274477/'
+#headers = {'User-Agent':'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:66.0) Gecko/201'}
 
-res = urllib.request.urlopen('https://movie.douban.com/celebrity/1274477/')
-html = res.read().decode('utf-8')
-#print(f.read())
+#req = urllib.request.Request(url=chaper_url, headers=headers)
+#html = urllib.request.urlopen(req).read().decode('utf-8')
+#res = urllib.request.urlopen(url=',headers=headers)
+#html = res.read().decode('utf-8')
+f = open('a.txt','r')
+html= f.read()
+
 soup = BeautifulSoup(html,'html.parser') 
-#name = soup.find('h1').span.text
-#print(name)
-'''
+name = soup.find('h1').text.split(' ')[0]
+print(name)
+
 pic = soup.find('a',class_='nbg')
 with open('1.jpg','wb') as f:
         #print(pic.find('img')['src'])
         import requests
         r = requests.get(pic.find('img')['src'])
         f.write(r.content)
-'''
+
 info = soup.find(class_='info')
 for d in info.findAll('li'):
-        #del d.find('li')
-        #del d['span']
-        print(d.get_text())
-#intro = soup.find(class_='related-info')
-#print(intro.span.text)
+        j = d.get_text().strip().split(':')
+        #print(j[0],j[1].strip())
+        if (j[0]=='性别'):
+                if (j[1].strip()=='男'):
+                        print('m')
+                else:
+                        print('f')
+        elif (j[0]=='星座'):
+                print(j[1].strip())
+        elif (j[0]=='出生日期'):
+                print(j[1].strip())
+        elif (j[0]=='出生地'):
+                print(j[1].strip())
+        elif (j[0]=='职业'):
+                print(j[1].strip())
+        #print(d.get_text())
+intro = soup.find(class_='all hidden')
+print(intro.text)
