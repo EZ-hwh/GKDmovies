@@ -45,9 +45,10 @@ def actor(request):
 
 def movie(request): 
     q = request.GET.get('movie_name')
-    login = request.session.get('login',None)
-    user = request.session.get('user_name',None)
+    p = request.session.get('user_name',None)
+    login = request.session.get('login',None)   
     movie = Movie.objects.get(movie_name=q)
+    user = User.objects.get(user_name=p)
     director = Direct.objects.filter(movie_name=q)
     actor = Play.objects.filter(movie_name=q)
     comment = Comment.objects.filter(movie_name=q)
@@ -152,14 +153,14 @@ def check(request):
         request.session['password'] = password           
         return render(request, 'login.html', {'message': message,'success':success})
 
-def add_comment(request): #wrong
-    
+def add_comment(request): 
     q = request.GET.get('movie_name')
     p = request.session.get('user_name',None)
     grade = request.GET.get('score')
     comment = request.GET.get('comment')
       
-    #if not comment :
+    if not comment :
+        return redirect('/movie/?movie_name=%s' % (movie.movie_name)) 
     
     movie = Movie.objects.get(movie_name=q)   
     user = User.objects.get(user_name=p)
@@ -167,19 +168,24 @@ def add_comment(request): #wrong
     
     return redirect('/movie/?movie_name=%s' % (movie.movie_name)) 
     
-
-    
+ 
 def delete_comment(request): #wrong  
-    movie = request.GET.get('movie_name')
-    user = request.GET.get('user')
+    q = request.GET.get('movie_name')
+    p = request.session.get('user_name',None)
+    movie = Movie.objects.get(movie_name=q)   
+    user = User.objects.get(user_name=p)
     Comment.objects.get(movie_name=movie, user_name=user).delete()
-    return redirect('/movie/?movie_name=%s' % (movie))
+    return redirect('/movie/?movie_name=%s' % (movie.movie_name))
 
 def modify_comment(request): #wrong
-    movie =  request.GET.get('movie_name')
-    user = request.GET.get('user')
+    q = request.GET.get('movie_name')
+    p = request.session.get('user_name',None)
+    movie = Movie.objects.get(movie_name=q)   
+    user = User.objects.get(user_name=p)
     new_grade = request.GET.get('score')
     new_comment = request.GET.get('comment')
     q = Comment.objects.get(movie_name=movie, user_name=user)
-    q.update(comment=new_comment,grade=new_grade)
-    return redirect('/movie/?movie_name=%s' % (movie))
+    q.comment = new_comment
+    q.grade = new_grade
+    q.save()
+    return redirect('/movie/?movie_name=%s' % (movie.movie_name))
