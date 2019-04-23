@@ -9,9 +9,11 @@
 	</br><p>{{ movie.movie_name }}</p>
     <!--<p>{{ movie.photo }}</p>-->
     
+    </br><p>导演</p>
+    
     {% for post in director %}
     <div>
-        </br><a href="/director/?director_name={{post.director_name}}">{{director.director_name}}</a>
+        </br><a href="/person/?name={{post.director_name.name}}">{{post.director_name.name}}</a>
     </div>
     {% empty %}
     <div class="no-post">
@@ -19,9 +21,11 @@
     </div>
     {% endfor %}
     
+    </br><p>演员</p>
+    
     {% for post in actor %}
     <div>
-        </br><a href="/actor/?actor_name={{post.actor_name}}">{{post.actor_name}}</a>
+        </br><a href="/person/?name={{post.actor_name.name}}">{{post.actor_name.name}}</a>
     </div>
     {% empty %}
     <div class="no-post">
