@@ -31,10 +31,10 @@ def search(request):
   
 	
 def person(request):
-    q = request.GET.get('person_name')
-    person = Person.objects.get(person_name=q)    
-    movie_d = Direct.objects.filter(person_name=q)
-    movie_a = Play.objects.filter(person_name=q)
+    q = request.GET.get('name')
+    person = Person.objects.get(name=q)    
+    movie_d = Direct.objects.filter(director_name=q)
+    movie_a = Play.objects.filter(actor_name=q)
     return render(request, 'person.html', {'person': person, 'movie_d': movie_d, 'movie_a':movie_a})
 
 def movie(request): 

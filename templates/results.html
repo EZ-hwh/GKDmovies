@@ -21,12 +21,12 @@
   <div class='classcification'>演员/导演</div>
   {% for post in person_list %}
   <div class='item-root'>
-    <a href="/person/?aperson_name={{post.name}}" class='cover-link'>
-      <img src="/static/media/{{post.person_photo}}" class='cover'>
+    <a href="/person/?name={{post.name}}" class='cover-link'>
+      <img src="/static/media/{{post.photo}}" class='cover'>
     </a>
     <div class='detail'>
       <div class='title'>
-        <a href="/person/?person_name={{post.name}}">{{post.name}}</a>
+        <a href="/person/?name={{post.name}}">{{post.name}}</a>
       </div>
     </div>
   </div>

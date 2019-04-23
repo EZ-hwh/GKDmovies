@@ -1,13 +1,9 @@
 #env/usr/bin python
 #encoding:utf-8
-'''
-功能：抽取html中的链接
-'''
-'''
-import django
-if django.VERSION >= (1, 7):#自动判断版本
-    django.setup()
-'''
+
+rubbish=["Paolo Carlini","Margaret Rawlings","Rod Myers","Scott Joel Gizicki","詹姆斯·凯伦","布莱恩·豪威","杜汶泽","Niall O'Brien","Luigi De Luca"]
+#print(rubbish[0])
+
 import random
 from GKDmovies.wsgi import *
 from search.models import *
@@ -30,7 +26,7 @@ def movie():
                         soup = BeautifulSoup(html,'html.parser') 
                         name = soup.find('h1').span.text
                         print(name)
-                        number = str(random.randint(100000,999999))
+                        number = str(random.randint(1000000,9999999))
                         pic = soup.find('a',class_='nbgnbg')
 
                         with open(number+'.jpg','wb') as f:
@@ -120,42 +116,52 @@ def a(html):
                 elif (j[0]=='职业'):
                         occupation = j[1].strip()
                 #print(d.get_text())
+        c=''
+        intro = soup.find(id='intro')
+        if (intro.find(class_='all-hidden')):
+                c=intro.find(class_='all hidden').text
+        else:
+                c=intro.find(class_='bd').text
         intro = soup.find(class_='all hidden')
-        Person.objects.get_or_create(name=name,intro=intro.text,constellation=constellation,gender=gender,birthdate=birthdate,birthplace=birthplace,occupation=occupation,photo=photo)
+        Person.objects.get_or_create(name=name,intro=c.strip(),constellation=constellation,gender=gender,birthdate=birthdate,birthplace=birthplace,occupation=occupation,photo=photo)
 
 def person():
         #Person.objects.all().delete()
+        #Play.objects.all().delete()
+        #Direct.objects.all().delete()
 
-        for i in range(250):
+        for i in range(48,250):
                 res = urllib.request.urlopen(df['movie_url'][i])
                 html = res.read().decode('utf-8')
-                print(html)
+                #print(html)
                 s=BeautifulSoup(html)
                 name1=s.findAll('h1')
                 for n in name1:
 
-                        print(n.span.text)
+                        #print(n.span.text)
                         soup = BeautifulSoup(html,'html.parser') 
                         name = soup.find('h1').span.text
                         print(name)
                         info = soup.find(id='info')
-                        
                         for d in info.findAll('span'):
                                 if (d.find(class_='pl')):
                                         if(d.find(class_='pl').string=='导演'):
                                                 for e in d.findAll('a'):
                                                         if (not Person.objects.filter(name=e.string)):                                                           
-                                                                res = urllib.request.urlopen(e['href'])
+                                                                res = urllib.request.urlopen('https://movie.douban.com'+e['href'])
+                                                                #print('https://movie.douban.com'+e['href'])
                                                                 html = res.read().decode('utf-8')    
-                                                                a(e.string)
-                                                        Direct.objects.get_or_create(movie_name = Movie.objects.filter(movie_name=name),director_name = Person.objects.filter(name=e.string))
+                                                                a(html)
+                                                        Direct.objects.get_or_create(movie_name = Movie.objects.get(movie_name=name),director_name = Person.objects.get(name=e.string))
                                                         
                                         elif(d.find(class_='pl').string=='主演'):
                                                 for e in d.findAll('a'): 
-                                                        if (not Person.objects.filter(name=e.string)):                                                           
-                                                                res = urllib.request.urlopen(e['href'])
-                                                                html = res.read().decode('utf-8')    
-                                                                a(e.string)
-                                                        Play.objects.get_or_create(movie_name = Movie.objects.filter(movie_name=name),actor_name = Person.objects.filter(name=e.string))                                                         
+                                                        print(e.string)
+                                                        if (e.string not in rubbish):
+                                                                if (not Person.objects.filter(name=e.string)):                                                           
+                                                                        res = urllib.request.urlopen('https://movie.douban.com'+e['href'])
+                                                                        html = res.read().decode('utf-8')    
+                                                                        a(html)
+                                                                Play.objects.get_or_create(movie_name = Movie.objects.get(movie_name=name),actor_name = Person.objects.get(name=e.string))                                                         
 
 person()

@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" class="ua-linux ua-webkit">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw" />
+    <title>
+    弗兰克·德拉邦特 (豆瓣)
+</title>
+    
+    <meta name="baidu-site-verification" content="cZdR4xxR7RxmM4zE" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+    
+    <meta name="keywords" content="弗兰克·德拉邦特 Frank Darabont,简介,个人资料,图片,电影作品,获奖情况,合作影人"/>
+    <meta name="description" content="弗兰克·德拉邦特简介、图片写真、获奖情况及电影作品一览"/>
+
+    <link rel="apple-touch-icon" href="https://img3.doubanio.com/f/movie/d59b2715fdea4968a450ee5f6c95c7d7a2030065/pics/movie/apple-touch-icon.png">
+    <link href="https://img3.doubanio.com/f/shire/bf61b1fa02f564a4a8f809da7c7179b883a56146/css/douban.css" rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/shire/ae3f5a3e3085968370b1fc63afcecb22d3284848/css/separation/_all.css" rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/movie/8864d3756094f5272d3c93e30ee2e324665855b0/css/movie/base/init.css" rel="stylesheet">
+    <script type="text/javascript">var _head_start = new Date();</script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/movie/0495cb173e298c28593766009c7b0a953246c5b5/js/movie/lib/jquery.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/c7db1e57a6f6aebaa1d8ca83a62a94904c19df95/js/douban.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/0efdc63b77f895eaf85281fb0e44d435c6239a3f/js/separation/_all.js"></script>
+    
+<link rel="alternate" href="android-app://com.douban.movie/doubanmovie/celebrity/1047973/" />
+<link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/movie/5c131bbdf002cf3c8ffada7c52640f616de723ce/css/movie/celebrity.css" />
+<link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/movie/a6d2e5a112ca7dfc3f4e023e67d1fdb398a0d819/css/movie/show.css" />
+<script type="text/javascript" src="https://img3.doubanio.com/f/shire/77323ae72a612bba8b65f845491513ff3329b1bb/js/do.js" data-cfg-autoload="false"></script>
+
+    <style type="text/css">
+.mod { margin-bottom: 25px }
+.mod .hd { margin-bottom: 10px }
+fieldset {border:1px solid #DDDDDD;margin-bottom:15px;padding:0 10px;}
+.mod h2{color:#333d48;}
+#headline img { width: 135px;}
+</style>
+    <style type="text/css">img { max-width: 100%; }</style>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/d27192b558fa326.css">
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  
+    <script type="text/javascript">var _body_start = new Date();</script>
+
+    
+    
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/0246c88/shire/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+<div class="top-nav-info">
+  <ul>
+    <li>
+    <a id="top-nav-doumail-link" href="https://www.douban.com/doumail/">豆邮</a>
+    </li>
+    <li class="nav-user-account">
+      <a target="_blank" href="https://accounts.douban.com/passport/setting/" class="bn-more">
+        <span>H白A告O的帐号</span><span class="arrow"></span>
+      </a>
+      <div class="more-items">
+        <table cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://www.douban.com/mine/">个人主页</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://www.douban.com/mine/orders/">我的订单</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://www.douban.com/mine/wallet/">我的钱包</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://accounts.douban.com/passport/setting/">帐号管理</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.douban.com/accounts/logout?source=movie&ck=QHKe">退出</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+  </ul>
+</div>
+
+  <div class="top-nav-reminder">
+    <a href="https://www.douban.com/notification/" class="lnk-remind">提醒</a>
+    <div id="top-nav-notimenu" class="more-items">
+      <div class="bd">
+        <p>加载中...</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="top-nav-doubanapp">
+  <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+  <div id="doubanapp-tip">
+    <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣 <span class="version">6.0</span> 全新发布</a>
+    <a href="javascript: void 0;" class="tip-close">×</a>
+  </div>
+  <div id="top-nav-appintro" class="more-items">
+    <p class="appintro-title">豆瓣</p>
+    <p class="qrcode">扫码直接下载</p>
+    <div class="download">
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=iOS">iPhone</a>
+      <span>·</span>
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=Android" class="download-android">Android</a>
+    </div>
+  </div>
+</div>
+
+    
+
+
+<div class="global-nav-items">
+  <ul>
+    <li class="">
+      <a href="https://www.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;162547179&quot;}">豆瓣</a>
+    </li>
+    <li class="">
+      <a href="https://book.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-book&quot;,&quot;uid&quot;:&quot;162547179&quot;}">读书</a>
+    </li>
+    <li class="on">
+      <a href="https://movie.douban.com"  data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-movie&quot;,&quot;uid&quot;:&quot;162547179&quot;}">电影</a>
+    </li>
+    <li class="">
+      <a href="https://music.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-music&quot;,&quot;uid&quot;:&quot;162547179&quot;}">音乐</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/location" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-location&quot;,&quot;uid&quot;:&quot;162547179&quot;}">同城</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/group" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-group&quot;,&quot;uid&quot;:&quot;162547179&quot;}">小组</a>
+    </li>
+    <li class="">
+      <a href="https://read.douban.com&#47;?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-read&quot;,&quot;uid&quot;:&quot;162547179&quot;}">阅读</a>
+    </li>
+    <li class="">
+      <a href="https://douban.fm&#47;?from_=shire_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-fm&quot;,&quot;uid&quot;:&quot;162547179&quot;}">FM</a>
+    </li>
+    <li class="">
+      <a href="https://time.douban.com&#47;?dt_time_source=douban-web_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-time&quot;,&quot;uid&quot;:&quot;162547179&quot;}">时间</a>
+    </li>
+    <li class="">
+      <a href="https://market.douban.com&#47;?utm_campaign=douban_top_nav&amp;utm_source=douban&amp;utm_medium=pc_web" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-market&quot;,&quot;uid&quot;:&quot;162547179&quot;}">豆品</a>
+    </li>
+    <li>
+      <a href="#more" class="bn-more"><span>更多</span></a>
+      <div class="more-items">
+        <table cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://ypy.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-ypy&quot;,&quot;uid&quot;:&quot;162547179&quot;}">豆瓣摄影</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</div>
+<script>
+  ;window._GLOBAL_NAV = {
+    USER_ID: "162547179",
+    UPLOAD_AUTH_TOKEN: "162547179:68757bf339d4f40022af50c571f271fde33ce6ea",
+    SSE_TOKEN: "7421b295277abe00d2ca43724a2db4b40f99b5b1",
+    SSE_TIMESTAMP: "1556022950",
+    DOUBAN_URL: "https://www.douban.com",
+    N_NEW_NOTIS: 0,
+    N_NEW_DOUMAIL: 0
+  };
+</script>
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/0246c88/shire/bundle.js" defer="defer"></script>
+
+
+
+
+    
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/0246c88/movie/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+
+<div id="db-nav-movie" class="nav">
+  <div class="nav-wrap">
+  <div class="nav-primary">
+    <div class="nav-logo">
+      <a href="https:&#47;&#47;movie.douban.com">豆瓣电影</a>
+    </div>
+    <div class="nav-search">
+      <form action="https:&#47;&#47;movie.douban.com/subject_search" method="get">
+        <fieldset>
+          <legend>搜索：</legend>
+          <label for="inp-query">
+          </label>
+          <div class="inp"><input id="inp-query" name="search_text" size="22" maxlength="60" placeholder="搜索电影、电视剧、综艺、影人" value=""></div>
+          <div class="inp-btn"><input type="submit" value="搜索"></div>
+          <input type="hidden" name="cat" value="1002" />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  </div>
+  <div class="nav-secondary">
+    
+
+<div class="nav-items">
+  <ul>
+    <li    ><a href="https://movie.douban.com/mine"
+     >我看</a>
+    </li>
+    <li    ><a href="https://movie.douban.com/cinema/nowplaying/"
+     >影讯&购票</a>
+    </li>
+    <li    ><a href="https://movie.douban.com/explore"
+     >选电影</a>
+    </li>
+    <li    ><a href="https://movie.douban.com/tv/"
+     >电视剧</a>
+    </li>
+    <li    ><a href="https://movie.douban.com/chart"
+     >排行榜</a>
+    </li>
+    <li    ><a href="https://movie.douban.com/tag/"
+     >分类</a>
+    </li>
+    <li    ><a href="https://movie.douban.com/review/best/"
+     >影评</a>
+    </li>
+    <li    ><a href="https://movie.douban.com/annual/2018?source=navigation"
+     >2018年度榜单</a>
+    </li>
+    <li    ><a href="https://www.douban.com/standbyme/2018?source=navigation"
+     >2018书影音报告</a>
+    </li>
+  </ul>
+</div>
+
+    <a href="https://movie.douban.com/annual/2018?source=movie_navigation" class="movieannual2018"></a>
+  </div>
+</div>
+
+<script id="suggResult" type="text/x-jquery-tmpl">
+  <li data-link="{{= url}}">
+            <a href="{{= url}}" onclick="moreurl(this, {from:'movie_search_sugg', query:'{{= keyword }}', subject_id:'{{= id}}', i: '{{= index}}', type: '{{= type}}'})">
+            <img src="{{= img}}" width="40" />
+            <p>
+                <em>{{= title}}</em>
+                {{if year}}
+                    <span>{{= year}}</span>
+                {{/if}}
+                {{if sub_title}}
+                    <br /><span>{{= sub_title}}</span>
+                {{/if}}
+                {{if address}}
+                    <br /><span>{{= address}}</span>
+                {{/if}}
+                {{if episode}}
+                    {{if episode=="unknow"}}
+                        <br /><span>集数未知</span>
+                    {{else}}
+                        <br /><span>共{{= episode}}集</span>
+                    {{/if}}
+                {{/if}}
+            </p>
+        </a>
+        </li>
+  </script>
+
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/0246c88/movie/bundle.js" defer="defer"></script>
+
+
+
+
+
+    
+    <div id="wrapper">
+        
+
+        
+    <div id="content">
+        
+    <h1>弗兰克·德拉邦特 Frank Darabont</h1>
+
+        <div class="grid-16-8 clearfix">
+            
+            
+            <div class="article">
+                
+
+
+
+
+<div id="headline" class="item">
+    <div class="pic">
+        <a class="nbg" title="弗兰克·德拉邦特 Frank Darabont" href="https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p230.webp">
+            <img alt="弗兰克·德拉邦特 Frank Darabont"
+                title="点击看大图"
+                src="https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p230.webp">
+        </a>
+        <span class="gact">
+            <a class="" rel="nofollow" href="https://movie.douban.com/celebrity/1047973/detail_edit">增改描述、换头像</a>
+        </span>
+    </div>
+    <div class="info">
+        
+    <ul class="">
+    
+        <li>
+            <span>性别</span>: 
+        男
+        </li>
+    
+        <li>
+            <span>星座</span>: 
+        水瓶座
+        </li>
+    
+        <li>
+            <span>出生日期</span>: 
+        1959-01-28
+        </li>
+    
+        <li>
+            <span>出生地</span>: 
+        法国,杜省,蒙贝利亚尔
+        </li>
+    
+        <li>
+            <span>职业</span>: 
+        编剧 / 导演 / 制片人 / 演员
+        </li>
+    
+        <li>
+            <span>更多外文名</span>: 
+        Frank A. Darabont
+        </li>
+    
+        <li>
+            <span>更多中文名</span>: 
+        弗兰克·达拉邦特
+        </li>
+    
+    
+        <li>
+            <span>imdb编号</span>: 
+        <a href="http://www.imdb.com/name/nm0001104" target="_blank">nm0001104</a>
+        </li>
+    
+    </ul>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="opt-bar" class="mod">
+    <div class="ll">
+
+            
+    
+    <form method="POST" action="connect" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="QHKe"/></div>
+        <input type="submit" class="a-btn j " value="收藏" title="" />
+    </form>
+
+
+        
+    
+    <span class="rec" id="None-1047973">
+    <a href= "#"
+        data-type="None"
+        data-url="https://movie.douban.com/celebrity/1047973/"
+        data-desc=""
+        data-title="影人 弗兰克·德拉邦特 Frank Darabont (来自豆瓣)"
+        data-pic="https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p230.jpeg"
+        class="bn-sharing ">
+        分享到
+    </a> &nbsp;&nbsp;
+    </span>
+
+    <script>
+        if (!window.DoubanShareMenuList) {
+            window.DoubanShareMenuList = [];
+        }
+        var __cache_url = __cache_url || {};
+
+        (function(u){
+            if(__cache_url[u]) return;
+            __cache_url[u] = true;
+            window.DoubanShareIcons = 'https://img3.doubanio.com/f/shire/d15ffd71f3f10a7210448fec5a68eaec66e7f7d0/pics/ic_shares.png';
+
+            var initShareButton = function() {
+                $.ajax({url:u,dataType:'script',cache:true});
+            };
+
+            if (typeof Do == 'function' && 'ready' in Do) {
+                Do(
+                    'https://img3.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css',
+                    'https://img3.doubanio.com/f/shire/4ea3216519a6183c7bcd4f7d1a6d4fd57ce1a244/js/ui/dialog.js',
+                    'https://img3.doubanio.com/f/movie/c4ab132ff4d3d64a83854c875ea79b8b541faf12/js/movie/lib/qrcode.min.js',
+                    initShareButton
+                );
+            } else if(typeof Douban == 'object' && 'loader' in Douban) {
+                Douban.loader.batch(
+                    'https://img3.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css',
+                    'https://img3.doubanio.com/f/shire/4ea3216519a6183c7bcd4f7d1a6d4fd57ce1a244/js/ui/dialog.js',
+                    'https://img3.doubanio.com/f/movie/c4ab132ff4d3d64a83854c875ea79b8b541faf12/js/movie/lib/qrcode.min.js'
+                ).done(initShareButton);
+            }
+
+        })('https://img3.doubanio.com/f/movie/32be6727ed3ad8f6c4a417d8a086355c3e7d1d27/js/movie/lib/sharebutton.js');
+    </script>
+
+
+    </div>
+    <div class="rr">
+        
+
+
+    <div class="doulist-add-btn">
+  
+
+  
+
+  
+  <a href="javascript:void(0)"
+     data-id="1047973"
+     data-cate="1043"
+     data-canview="True"
+     data-url="https://movie.douban.com/celebrity/1047973/"
+     data-catename=""
+     data-link="https://www.douban.com/people/162547179/doulists/all?add=1047973&amp;cat=1043"
+     data-title="弗兰克·德拉邦特 Frank Darabont"
+     data-picture="https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p230.webp"
+     class="lnk-doulist-add"
+     onclick="moreurl(this, { 'from':'doulist-btn-1043-1047973-162547179'})">
+      <i></i>添加到豆列
+  </a>
+    </div>
+
+
+        
+
+
+
+
+        <script type="text/javascript">
+            Do.add('dialog-css', {path: "https://img3.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css",
+                type: 'css'})
+            Do.add('dialog', {path: "https://img3.doubanio.com/f/shire/4ea3216519a6183c7bcd4f7d1a6d4fd57ce1a244/js/ui/dialog.js", type: 'js',
+                requires: ['dialog-css']})
+            Do.add('textarea-mention-default-style', {
+                path: "https://img3.doubanio.com/f/shire/887858ba20379f8a4789863ea7fda9a6ef36a0e5/css/lib/textarea-mention.css", type: 'css'})
+            Do.add('textarea-mention', {
+                path: "https://img3.doubanio.com/f/shire/1d985568f3cc434b145983919d9954e2ca627e9c/js/lib/textarea-mention.js", type: 'js',
+                requires: ['mustache', 'textarea-mention-default-style']})
+            Do.add('mustache', {path: "https://img3.doubanio.com/f/shire/a40c5220b3f40ce737b366c0030ecf810b37bfea/js/lib/mustache.js", type: 'js'})
+            Do.add('movie-share-css', {path: "https://img3.doubanio.com/f/movie/6ab3b78c54165a03a932babd615d11fcdbfce2a3/css/movie/share.css",
+                type: 'css'})
+            Do.add('movie:share', {path: "https://img3.doubanio.com/f/movie/230795bbf6a9a7700cc6f395067493d5dcc572ad/js/movie/share.js", type: 'js',
+                requires: ['dialog', 'textarea-mention', 'movie-share-css']})
+            Do('movie:share')
+        </script>
+
+<div class="rec-sec">
+<span class="rec">
+    <script id="movie-share" type="text/x-html-snippet">
+        
+    <form class="movie-share" action="/j/share" method="POST"><div style="display:none;"><input type="hidden" name="ck" value="QHKe"/></div>
+        <div class="clearfix form-bd">
+            <div class="input-area">
+                <textarea name="text" class="share-text" cols="72" data-mention-api="https://api.douban.com/shuo/in/complete?alt=xd&amp;callback=?"></textarea>
+                <input type="hidden" name="target-id" value="1047973">
+                <input type="hidden" name="target-type" value="3">
+                <input type="hidden" name="title" value="弗兰克·德拉邦特 Frank Darabont">
+                <input type="hidden" name="desc" value="1959-01-28 / 肖申克的救赎 / 金刚 / 迷雾">
+                <input type="hidden" name="redir" value=""/>
+                <div class="mentioned-highlighter"></div>
+            </div>
+
+            <div class="info-area">
+                    <img class="media" src="https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p230.webp" />
+                <strong>弗兰克·德拉邦特 Frank Darabont</strong>
+                <p>1959-01-28 / 肖申克的救赎 / 金刚 / 迷雾</p>
+                <p class="error server-error">&nbsp;</p>
+            </div>
+        </div>
+        <div class="form-ft">
+            <div class="form-ft-inner">
+                
+
+
+
+
+<div class="sync-setting pl">
+    <label>分享到</label>
+
+
+
+            <a id="lnk-sync-setting" class="no-visited no-hover" href="https://movie.douban.com/settings/sync" target="_blank"
+                class="pl share-label"><img src="https://img3.doubanio.com/f/movie/9389c4e5cab0cd1089a189d607d296c31ddb1bc0/pics/movie/share_g.png"
+                alt="去绑定新浪微博" />去绑定新浪微博</a>
+
+</div>
+
+<style type="text/css">
+    .sync-setting {
+        float: left;
+    }
+    #lnk-sync-setting,
+    #lnk-sync-setting:hover,
+    #lnk-sync-setting:visited {
+        vertical-align: middle;
+        color: #0192b5;
+        background: none;
+        line-height: 27px;
+        margin-right: 8px;
+    }
+    #lnk-sync-setting img {
+        vertical-align: baseline;
+        *vertical-align: middle;
+        opacity: .5;
+        filter: alpha(opacity=50);
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        *display: inline;
+        zoom: 1;
+        position: relative;
+        top: 1px;
+        margin-left: 5px;
+    }
+    #lnk-sync-setting:hover img {
+        opacity: .8;
+        background: none;
+        filter: alpha(opacity=80);
+    }
+    .share-label {
+        margin: 8px;
+        cursor: pointer;
+        vertical-align: middle;
+        *vertical-align: text-bottom;
+    }
+    .interest-form-ft .share-label input {
+        margin-bottom: 0;
+    }
+    .interest-form-ft {
+        text-align: right;
+    }
+    .interest-form-ft .bn-flat {
+        float: none;
+    }
+    .interest-form-ft .sync-setting {
+        float: left;
+        line-height: 25px;
+    }
+</style>
+
+
+                <span class="avail-num-indicator">140</span>
+                <span class="bn-flat">
+                    <input type="submit" value="推荐" />
+                </span>
+            </div>
+        </div>
+    </form>
+    
+    <div id="suggest-mention-tmpl" style="display:none;">
+        <ul>
+            {{#users}}
+            <li id="{{uid}}">
+              <img src="{{avatar}}">{{{username}}}&nbsp;<span>({{{uid}}})</span>
+            </li>
+            {{/users}}
+        </ul>
+    </div>
+
+
+    </script>
+
+        
+        <a href="#" data-share-dialog="#movie-share" data-dialog-title="推荐影人" class="lnk-sharing" share-id="1047973" data-mode="plain" data-name="弗兰克·德拉邦特 Frank Darabont" data-type="" data-desc="1959-01-28 / 肖申克的救赎 / 金刚 / 迷雾" data-href="https://movie.douban.com/celebrity/1047973/" data-image="https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p230.webp" data-properties="{}" data-redir="" data-text="" data-apikey="" data-curl="" data-count="10" data-object_kind="1043" data-object_id="1047973" data-target_type="rec" data-target_action="0" data-action_props="{&#34;actor_url&#34;:&#34;https:\/\/movie.douban.com\/celebrity\/1047973\/&#34;,&#34;actor_name&#34;:&#34;弗兰克·德拉邦特 Frank Darabont&#34;}">推荐</a>
+</span>
+
+
+</div>
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="intro" class="mod">
+    <div class="hd">
+    <h2>
+        影人简介
+            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+    </h2>
+</div>
+    <div class="bd">
+            　　弗兰克·达拉邦特为数极少的导演作品却为他赢得了全世界影迷的爱戴：比如《肖申克的救赎》和《绿里奇迹》。<br />　　比起导演这个工作，弗兰克·达拉邦特更适合被称为编剧，然而他为数极少的导演作品却为他赢得了全世界影迷的爱戴：比如《肖申克的救赎》和《绿里奇迹》。而2001年，他的奥斯卡野心之作《忘了我是谁》让金·凯瑞在正剧上演足了瘾，却票房、口碑双双失利。2007年的作品是根据斯蒂芬·金小说改编的《迷雾》。
+    </div>
+</div>
+
+
+
+<div id="photos" class="mod">
+    <div class="hd">
+    <h2>
+        影人图片
+            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+            <span class="pl">&nbsp;(
+                
+                <a href="https://movie.douban.com/celebrity/1047973/photos/" target="_self">全部12张</a>&nbsp;&middot;&nbsp;<a href="https://movie.douban.com/celebrity/1047973/photos/upload" target="_self">上传照片</a>
+                ) </span>
+    </h2>
+</div>
+    
+<ul class="pic-col5">
+        <li>
+            <a href="https://movie.douban.com/celebrity/1047973/photo/643072179/">
+                <img src="https://img1.doubanio.com/view/photo/sqxs/public/p643072179.webp">
+        </a>
+    </li>
+        <li>
+            <a href="https://movie.douban.com/celebrity/1047973/photo/1705234798/">
+                <img src="https://img1.doubanio.com/view/photo/sqxs/public/p1705234798.webp">
+        </a>
+    </li>
+        <li>
+            <a href="https://movie.douban.com/celebrity/1047973/photo/643072529/">
+                <img src="https://img1.doubanio.com/view/photo/sqxs/public/p643072529.webp">
+        </a>
+    </li>
+        <li>
+            <a href="https://movie.douban.com/celebrity/1047973/photo/643072517/">
+                <img src="https://img1.doubanio.com/view/photo/sqxs/public/p643072517.webp">
+        </a>
+    </li>
+        <li class="last">
+            <a href="https://movie.douban.com/celebrity/1047973/photo/1705234784/">
+                <img src="https://img3.doubanio.com/view/photo/sqxs/public/p1705234784.webp">
+        </a>
+    </li>
+</ul>
+
+</div>
+
+
+
+
+<div class="mod">
+    <div class="hd">
+    <h2>
+        获奖情况
+            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+            <span class="pl">&nbsp;(
+                
+                    <a href="https://movie.douban.com/celebrity/1047973/awards/" target="_self">全部</a>
+                ) </span>
+    </h2>
+</div>
+        
+        <ul class="award">
+            <li class="">2000年</li>
+            <li class="">
+                <a href="https://movie.douban.com/awards/Oscar/72/">第72届奥斯卡金像奖</a>
+            </li>
+            <li class="">最佳影片(提名)</li>
+            <li class=""><a href='https://movie.douban.com/subject/1300374/' target='_blank'>绿里奇迹</a></li>
+        </ul>
+        
+        <ul class="award">
+            <li class="">2000年</li>
+            <li class="">
+                <a href="https://movie.douban.com/awards/Oscar/72/">第72届奥斯卡金像奖</a>
+            </li>
+            <li class="">最佳改编剧本(提名)</li>
+            <li class=""><a href='https://movie.douban.com/subject/1300374/' target='_blank'>绿里奇迹</a></li>
+        </ul>
+        
+        <ul class="award">
+            <li class="">1995年</li>
+            <li class="">
+                <a href="https://movie.douban.com/awards/Oscar/67/">第67届奥斯卡金像奖</a>
+            </li>
+            <li class="">最佳改编剧本(提名)</li>
+            <li class=""><a href='https://movie.douban.com/subject/1292052/' target='_blank'>肖申克的救赎</a></li>
+        </ul>
+</div>
+
+
+
+
+
+
+<div id="recent_movies" class="mod">
+    <div class="hd">
+        
+    <h2>
+        最近的5部作品（已上映）
+            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+            <span class="pl">&nbsp;(
+                
+                    <a href="https://movie.douban.com/celebrity/1047973/movies?sortby=time&amp;format=pic" target="_self">全部</a>
+                ) </span>
+    </h2>
+
+    </div>
+        <div class="bd">
+            <ul class="list-s">
+                    <li class="">
+                            <h3>2018</h3>
+                        <div class="pic">
+                            <a href="https://movie.douban.com/subject/27664846/">
+                                <img class=""
+                                    alt="行尸走肉 第九季 The Walking Dead Season 9"
+                                    src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2533370401.webp"
+                                    title="The Walking Dead"/>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <a href="https://movie.douban.com/subject/27664846/" title="行尸走肉 第九季" class="">行尸走肉 第九季</a>
+                                <em>7.8</em>
+                        </div>
+                    </li>
+                    <li class="">
+                            <h3>2017</h3>
+                        <div class="pic">
+                            <a href="https://movie.douban.com/subject/26842605/">
+                                <img class=""
+                                    alt="行尸走肉 第八季 The Walking Dead Season 8"
+                                    src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2512892990.webp"
+                                    title="The Walking Dead"/>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <a href="https://movie.douban.com/subject/26842605/" title="行尸走肉 第八季" class="">行尸走肉 第八季</a>
+                                <em>6.7</em>
+                        </div>
+                    </li>
+                    <li class="">
+                            <h3>2016</h3>
+                        <div class="pic">
+                            <a href="https://movie.douban.com/subject/26654811/">
+                                <img class=""
+                                    alt="行尸走肉 第七季 The Walking Dead Season 7"
+                                    src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2405171440.webp"
+                                    title="The Walking Dead"/>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <a href="https://movie.douban.com/subject/26654811/" title="行尸走肉 第七季" class="">行尸走肉 第七季</a>
+                                <em>8.1</em>
+                        </div>
+                    </li>
+                    <li class="">
+                            <h3>2015</h3>
+                        <div class="pic">
+                            <a href="https://movie.douban.com/subject/26101081/">
+                                <img class=""
+                                    alt="行尸走肉 第六季 The Walking Dead Season 6"
+                                    src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2309158917.webp"
+                                    title="The Walking Dead"/>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <a href="https://movie.douban.com/subject/26101081/" title="行尸走肉 第六季" class="">行尸走肉 第六季</a>
+                                <em>8.8</em>
+                        </div>
+                    </li>
+                    <li class="">
+                            <h3>2014</h3>
+                        <div class="pic">
+                            <a href="https://movie.douban.com/subject/25757189/">
+                                <img class=""
+                                    alt="行尸走肉 第五季 The Walking Dead Season 5"
+                                    src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2198888069.webp"
+                                    title="The Walking Dead"/>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <a href="https://movie.douban.com/subject/25757189/" title="行尸走肉 第五季" class="">行尸走肉 第五季</a>
+                                <em>8.9</em>
+                        </div>
+                    </li>
+            </ul>
+        </div>
+</div>
+
+
+
+    
+
+<div id="best_movies" class="mod">
+    <div class="hd">
+    <h2>
+        最受好评的5部作品
+            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+            <span class="pl">&nbsp;(
+                
+                    <a href="https://movie.douban.com/celebrity/1047973/movies?sortby=vote&amp;format=pic" target="_self">全部</a>
+                ) </span>
+    </h2>
+</div>
+    <div class="bd">
+        <ul class="list-s">
+            <li class="">
+                <div class="pic">
+                    <a href="https://movie.douban.com/subject/1292052/">
+                        <img alt="肖申克的救赎 The Shawshank Redemption"
+                            src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p480747492.webp"
+                            title="The Shawshank Redemption"
+                            class="" />
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="https://movie.douban.com/subject/1292052/" title="肖申克的救赎" class="">肖申克的救赎</a>
+                    <em class="">9.6</em>
+                        <div class="pl">1994</div>
+                </div>
+            </li>
+            <li class="">
+                <div class="pic">
+                    <a href="https://movie.douban.com/subject/2153939/">
+                        <img alt="盾牌 第六季 The Shield Season 6"
+                            src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2057897902.webp"
+                            title="The Shield "
+                            class="" />
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="https://movie.douban.com/subject/2153939/" title="盾牌 第六季" class="">盾牌 第六季</a>
+                    <em class="">9.1</em>
+                        <div class="pl">2007</div>
+                </div>
+            </li>
+            <li class="">
+                <div class="pic">
+                    <a href="https://movie.douban.com/subject/25757189/">
+                        <img alt="行尸走肉 第五季 The Walking Dead Season 5"
+                            src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2198888069.webp"
+                            title="The Walking Dead"
+                            class="" />
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="https://movie.douban.com/subject/25757189/" title="行尸走肉 第五季" class="">行尸走肉 第五季</a>
+                    <em class="">8.9</em>
+                        <div class="pl">2014</div>
+                </div>
+            </li>
+            <li class="">
+                <div class="pic">
+                    <a href="https://movie.douban.com/subject/3206150/">
+                        <img alt="明星伙伴  第五季 Entourage Season 5"
+                            src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1285041434.webp"
+                            title="Entourage "
+                            class="" />
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="https://movie.douban.com/subject/3206150/" title="明星伙伴  第五季" class="">明星伙伴  第五季</a>
+                    <em class="">8.8</em>
+                        <div class="pl">2008</div>
+                </div>
+            </li>
+            <li class="">
+                <div class="pic">
+                    <a href="https://movie.douban.com/subject/21327878/">
+                        <img alt="行尸走肉 第四季 The Walking Dead Season 4"
+                            src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2171812548.webp"
+                            title="The Walking Dead"
+                            class="" />
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="https://movie.douban.com/subject/21327878/" title="行尸走肉 第四季" class="">行尸走肉 第四季</a>
+                    <em class="">8.8</em>
+                        <div class="pl">2013</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<div id="partners" class="mod">
+    <div class="hd">
+    <h2>
+        合作2次以上的影人
+            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+            <span class="pl">&nbsp;(
+                
+                    <a href="https://movie.douban.com/celebrity/1047973/partners" target="_self">全部</a>
+                ) </span>
+    </h2>
+</div>
+    <div class="bd">
+        <ul class="list-s">
+        <li class="">
+                <div class="pic">
+                    <a href="https://movie.douban.com/celebrity/1115741/">
+                        <img alt="梅丽莎·麦克布莱德"
+                            src="https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1434590386.01.webp"
+                            class="" />
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="https://movie.douban.com/celebrity/1115741/" title="梅丽莎·麦克布莱德" class="">梅丽莎·麦克布莱德</a>
+                    <span class="pl">
+                            合作作品(<a href="https://movie.douban.com/celebrity/1047973/partners#1115741">10</a>)
+                    </span>
+                </div>
+            </li>
+        <li class="">
+                <div class="pic">
+                    <a href="https://movie.douban.com/celebrity/1128804/">
+                        <img alt="格里高利·尼克特洛"
+                            src="https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p10002.webp"
+                            class="" />
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="https://movie.douban.com/celebrity/1128804/" title="格里高利·尼克特洛" class="">格里高利·尼克特洛</a>
+                    <span class="pl">
+                            合作作品(<a href="https://movie.douban.com/celebrity/1047973/partners#1128804">9</a>)
+                    </span>
+                </div>
+            </li>
+        <li class="">
+                <div class="pic">
+                    <a href="https://movie.douban.com/celebrity/1013802/">
+                        <img alt="诺曼·瑞杜斯"
+                            src="https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p24185.webp"
+                            class="" />
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="https://movie.douban.com/celebrity/1013802/" title="诺曼·瑞杜斯" class="">诺曼·瑞杜斯</a>
+                    <span class="pl">
+                            合作作品(<a href="https://movie.douban.com/celebrity/1047973/partners#1013802">9</a>)
+                    </span>
+                </div>
+            </li>
+        <li class="">
+                <div class="pic">
+                    <a href="https://movie.douban.com/celebrity/1049600/">
+                        <img alt="安德鲁·林肯"
+                            src="https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p3659.webp"
+                            class="" />
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="https://movie.douban.com/celebrity/1049600/" title="安德鲁·林肯" class="">安德鲁·林肯</a>
+                    <span class="pl">
+                            合作作品(<a href="https://movie.douban.com/celebrity/1047973/partners#1049600">9</a>)
+                    </span>
+                </div>
+            </li>
+        <li class="">
+                <div class="pic">
+                    <a href="https://movie.douban.com/celebrity/1087302/">
+                        <img alt="杰弗里·德曼"
+                            src="https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1529926581.55.webp"
+                            class="" />
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="https://movie.douban.com/celebrity/1087302/" title="杰弗里·德曼" class="">杰弗里·德曼</a>
+                    <span class="pl">
+                            合作作品(<a href="https://movie.douban.com/celebrity/1047973/partners#1087302">9</a>)
+                    </span>
+                </div>
+            </li>
+        <li class="">
+                <div class="pic">
+                    <a href="https://movie.douban.com/celebrity/1265151/">
+                        <img alt="钱德勒·里格斯"
+                            src="https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1382429215.18.webp"
+                            class="" />
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="https://movie.douban.com/celebrity/1265151/" title="钱德勒·里格斯" class="">钱德勒·里格斯</a>
+                    <span class="pl">
+                            合作作品(<a href="https://movie.douban.com/celebrity/1047973/partners#1265151">9</a>)
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+            </div>
+            <div class="aside">
+                
+
+
+
+
+
+
+
+
+
+
+<!-- douban ad begin -->
+<div id="dale_movie_celebrity_top_right"></div>
+<!-- douban ad end -->
+
+
+
+
+<div id="fans" class="mod">
+    <div class="hd">
+    <h2>
+        弗兰克·德拉邦特的影迷（4517）
+            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+            <span class="pl">&nbsp;(
+                
+                    <a href="https://movie.douban.com/celebrity/1047973/fans" target="_self">全部</a>
+                ) </span>
+    </h2>
+</div>
+    
+<ul class="list-s">
+    <li class="">
+        <a class="nbg" href="https://www.douban.com/people/Zatoichi610/">
+            <img class="" alt="盲市" src="https://img3.doubanio.com/icon/u141513409-21.jpg">
+        </a>
+        <span><a class="" href="https://www.douban.com/people/Zatoichi610/">盲市</a></span>
+    </li>
+    <li class="">
+        <a class="nbg" href="https://www.douban.com/people/FFIONN/">
+            <img class="" alt="（null）" src="https://img3.doubanio.com/icon/u51724071-41.jpg">
+        </a>
+        <span><a class="" href="https://www.douban.com/people/FFIONN/">（null）</a></span>
+    </li>
+    <li class="">
+        <a class="nbg" href="https://www.douban.com/people/98518448/">
+            <img class="" alt="阿姊与娭毑" src="https://img3.doubanio.com/icon/u98518448-4.jpg">
+        </a>
+        <span><a class="" href="https://www.douban.com/people/98518448/">阿姊与娭毑</a></span>
+    </li>
+    <li class="">
+        <a class="nbg" href="https://www.douban.com/people/56445471/">
+            <img class="" alt="最后的假寐" src="https://img3.doubanio.com/icon/u56445471-5.jpg">
+        </a>
+        <span><a class="" href="https://www.douban.com/people/56445471/">最后的假寐</a></span>
+    </li>
+    <li class="">
+        <a class="nbg" href="https://www.douban.com/people/158165131/">
+            <img class="" alt="勇敢的我呀" src="https://img3.doubanio.com/icon/u158165131-3.jpg">
+        </a>
+        <span><a class="" href="https://www.douban.com/people/158165131/">勇敢的我呀</a></span>
+    </li>
+    <li class="">
+        <a class="nbg" href="https://www.douban.com/people/heiyucai/">
+            <img class="" alt="一无所有走一回" src="https://img1.doubanio.com/icon/u144175462-17.jpg">
+        </a>
+        <span><a class="" href="https://www.douban.com/people/heiyucai/">一无所有走一回</a></span>
+    </li>
+    <li class="">
+        <a class="nbg" href="https://www.douban.com/people/54940586/">
+            <img class="" alt="离桑" src="https://img3.doubanio.com/icon/u54940586-14.jpg">
+        </a>
+        <span><a class="" href="https://www.douban.com/people/54940586/">离桑</a></span>
+    </li>
+    <li class="">
+        <a class="nbg" href="https://www.douban.com/people/157222990/">
+            <img class="" alt="云尘" src="https://img1.doubanio.com/icon/user_normal.jpg">
+        </a>
+        <span><a class="" href="https://www.douban.com/people/157222990/">云尘</a></span>
+    </li>
+</ul>
+
+</div>
+
+<div id="dale_movie_celebrity_middle_mini"></div>
+
+            </div>
+            <div class="extra">
+                
+    <div id="dale_movie_celebrity_bottom"></div>
+
+            </div>
+        </div>
+    </div>
+
+        
+    <div id="footer">
+            <div class="footer-extra"></div>
+        
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2019 douban.com, all rights reserved 北京豆网科技有限公司
+</span>
+
+<a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+<span class="fright">
+    <a href="https://www.douban.com/about">关于豆瓣</a>
+    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="https://www.douban.com/about?policy=disclaimer">免责声明</a>
+    
+    · <a href="https://help.douban.com/?app=movie" target="_blank">帮助中心</a>
+    · <a href="https://www.douban.com/doubanapp/">移动应用</a>
+    · <a href="https://www.douban.com/partner/">豆瓣广告</a>
+</span>
+
+    </div>
+
+    </div>
+    <script type="text/javascript" src="https://img3.doubanio.com/misc/mixed_static/c9f97a95165983c.js"></script>
+    
+<!-- douban ad begin -->
+
+
+
+
+
+    
+<script type="text/javascript">
+    (function (global) {
+        var newNode = global.document.createElement('script'),
+            existingNode = global.document.getElementsByTagName('script')[0],
+            adSource = '//erebor.douban.com/',
+            userId = '162547179',
+            browserId = 'fPdndRU4DNw',
+            criteria = '3:/celebrity/1047973/',
+            preview = '',
+            debug = false,
+            adSlots = ['dale_movie_celebrity_top_right', 'dale_movie_celebrity_bottom', 'dale_movie_celebrity_middle_mini'];
+
+        global.DoubanAdRequest = {src: adSource, uid: userId, bid: browserId, crtr: criteria, prv: preview, debug: debug};
+        global.DoubanAdSlots = (global.DoubanAdSlots || []).concat(adSlots);
+
+        newNode.setAttribute('type', 'text/javascript');
+        newNode.setAttribute('src', 'https://img3.doubanio.com/f/adjs/1d6cf073a30ca555fd098137bf1e9598740b169e/ad.release.js');
+        newNode.setAttribute('async', true);
+        existingNode.parentNode.insertBefore(newNode, existingNode);
+    })(this);
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- douban ad end -->
+
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/1aa9d13e2c2ebdbd027307b5f91550cbd4ec2279/js/lib/jquery.ba-hashchange.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(window).hashchange();
+            if(window.location.href.indexOf("?")>0){
+                if(window.history.pushState){
+                    window.history.pushState(null, document.title,  window.location.href.substring(0,window.location.href.indexOf("?")));
+                }
+            }
+        });
+    </script>
+
+
+    
+  
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript';
+    g.defer=true;
+    g.async=true;
+    g.src=p+'://img3.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+})();
+</script>
+
+<script type="text/javascript">
+var setMethodWithNs = function(namespace) {
+  var ns = namespace ? namespace + '.' : ''
+    , fn = function(string) {
+        if(!ns) {return string}
+        return ns + string
+      }
+  return fn
+}
+
+var gaWithNamespace = function(fn, namespace) {
+  var method = setMethodWithNs(namespace)
+  fn.call(this, method)
+}
+
+var _gaq = _gaq || []
+  , accounts = [
+      { id: 'UA-7019765-1', namespace: 'douban' }
+    , { id: 'UA-7019765-19', namespace: '' }
+    ]
+  , gaInit = function(account) {
+      gaWithNamespace(function(method) {
+        gaInitFn.call(this, method, account)
+      }, account.namespace)
+    }
+  , gaInitFn = function(method, account) {
+      _gaq.push([method('_setAccount'), account.id]);
+      _gaq.push([method('_setSampleRate'), '5']);
+
+      
+  _gaq.push([method('_addOrganic'), 'google', 'q'])
+  _gaq.push([method('_addOrganic'), 'baidu', 'wd'])
+  _gaq.push([method('_addOrganic'), 'soso', 'w'])
+  _gaq.push([method('_addOrganic'), 'youdao', 'q'])
+  _gaq.push([method('_addOrganic'), 'so.360.cn', 'q'])
+  _gaq.push([method('_addOrganic'), 'sogou', 'query'])
+  if (account.namespace) {
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣'])
+    _gaq.push([method('_addIgnoredOrganic'), 'douban'])
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣网'])
+    _gaq.push([method('_addIgnoredOrganic'), 'www.douban.com'])
+  }
+
+      if (account.namespace === 'douban') {
+        _gaq.push([method('_setDomainName'), '.douban.com'])
+      }
+
+        _gaq.push([method('_setCustomVar'), 1, 'responsive_view_mode', 'desktop', 3])
+
+        _gaq.push([method('_setCustomVar'), 2, 'login_status', '1', 2]);
+
+      _gaq.push([method('_trackPageview')])
+    }
+
+for(var i = 0, l = accounts.length; i < l; i++) {
+  var account = accounts[i]
+  gaInit(account)
+}
+
+
+;(function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+})()
+</script>
+
+
+
+
+
+
+
+
+      
+    
+
+    <!-- brand68-docker-->
+
+  <script>_SPLITTEST=''</script>
+</body>
+
+</html>
+
+
+

@@ -8,16 +8,16 @@
 {% endblock css %}
 
 {% block context %}
-<form action="/actor/?actor_name" method="get">
+<form action="/person/?name" method="get">
     <div id='wrapper'>
-        <h1>{{actor.actor_name}}</h1>
+        <h1>{{person.name}}</h1>
         <div id='headline'>
             <div class='pic'>
-                <img src="/static/media/{{actor.actor_photo}}">
+                <img src="/static/media/{{person.photo}}">
             </div>
             <div class='info'>
             <ul>
-                <li>性别： {{actor.actor_gender}} </li>
+                <li>性别： {{person.gender}} </li>
             </ul>
             </div>
         </div>
@@ -26,7 +26,7 @@
                 <h2>演员介绍</h2>
             </div>
             <div class='bd'>
-                <span class='short'>{{actor.actor_intro}}</span>
+                <span class='short'>{{person.intro}}</span>
             </div>
         </div>
         <div id='movies'>

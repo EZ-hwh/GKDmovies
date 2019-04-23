@@ -9,7 +9,7 @@ class Person(models.Model):
     constellation = models.TextField(blank=True,null=True)
     birthplace = models.TextField(blank=True,null=True)
     occupation = models.TextField(blank=True,null=True)
-    intro = models.TextField()
+    intro = models.TextField(blank=True,null=True)
     photo = models.ImageField(default="personset/no_img.jpg",upload_to="personset/")
     gender_status = (
         ('m', 'male'),
