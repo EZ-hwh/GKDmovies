@@ -129,11 +129,12 @@ def person():
         for i in range(250):
                 res = urllib.request.urlopen(df['movie_url'][i])
                 html = res.read().decode('utf-8')
+                print(html)
                 s=BeautifulSoup(html)
                 name1=s.findAll('h1')
                 for n in name1:
 
-                        #print(n.span.text)
+                        print(n.span.text)
                         soup = BeautifulSoup(html,'html.parser') 
                         name = soup.find('h1').span.text
                         print(name)
@@ -143,11 +144,18 @@ def person():
                                 if (d.find(class_='pl')):
                                         if(d.find(class_='pl').string=='导演'):
                                                 for e in d.findAll('a'):
-                                                        print(e.string)
-                                                        #Direct.objects.get_or_create(movie_name = name,director_name = e.string)
+                                                        if (not Person.objects.filter(name=e.string)):                                                           
+                                                                res = urllib.request.urlopen(e['href'])
+                                                                html = res.read().decode('utf-8')    
+                                                                a(e.string)
+                                                        Direct.objects.get_or_create(movie_name = Movie.objects.filter(movie_name=name),director_name = Person.objects.filter(name=e.string))
                                                         
                                         elif(d.find(class_='pl').string=='主演'):
                                                 for e in d.findAll('a'): 
-                                                        print(e.string)
-                                                        #Play.objects.get_or_create(movie_name = name,actor_name = e.string)                                                         
+                                                        if (not Person.objects.filter(name=e.string)):                                                           
+                                                                res = urllib.request.urlopen(e['href'])
+                                                                html = res.read().decode('utf-8')    
+                                                                a(e.string)
+                                                        Play.objects.get_or_create(movie_name = Movie.objects.filter(movie_name=name),actor_name = Person.objects.filter(name=e.string))                                                         
+
 person()
