@@ -6,14 +6,15 @@
 
 <form action="/movie/?movie_name" method="get">
 {% csrf_token %}
-	<p><a name="movie">{{ movie.movie_name }}</a></p>
-    <p>{{ movie.synopsis }}</p>
+
+	</br><p>{{ movie.movie_name }}</p>
+    </br><p>{{ movie.synopsis }}</p>
     <!--<p>{{ movie.photo }}</p>-->
     
     {% for post in director %}
     <div>
-        </br><a href="/director/?director_name={{post.director_name}}">{{movie.director_name}}</a>
-    <div>
+        </br><a href="/director/?director_name={{post.director_name}}">{{director.director_name}}</a>
+    </div>
     {% empty %}
     <div class="no-post">
         没有搜索到符合条件的文章
@@ -23,17 +24,7 @@
     {% for post in actor %}
     <div>
         </br><a href="/actor/?actor_name={{post.actor_name}}">{{post.actor_name}}</a>
-    <div>
-    {% empty %}
-    <div class="no-post">
-        没有搜索到符合条件的文章
     </div>
-    {% endfor %}
-    
-    {% for post in label %}
-    <div>
-        </br>{{post.label}}
-    <div>
     {% empty %}
     <div class="no-post">
         没有搜索到符合条件的文章
@@ -42,30 +33,29 @@
     
     {% for post in comment %}
     <div>
-        </br>{{comment.user_name}}
-        </br>{{comment.comment_date}}
-        </br>{{comment.grade}}
-        </br>{{comment.comment}}
-    <div>
+        </br><p>{{post.user_name}}</p>
+        </br><p>{{post.grade}}</p>
+        </br><p>{{post.comment}}</p>
+    </div>
     {% empty %}
     <div class="no-post">
         没有搜索到符合条件的文章
     </div>
     {% endfor %}
-    
+   
     {% if request.session.login %}
         <label><input name="score" type="radio" value=5 checked />5</label>
         <label><input name="score" type="radio" value=4 />4 </label>
         <label><input name="score" type="radio" value=3 />3 </label>
         <label><input name="score" type="radio" value=2 />2 </label>
         <label><input name="score" type="radio" value=1 />1 </label>    
-        {% if not n_exist %}
+        {% if n_exist %}
             </br><textarea rows="10" cols="30" placeholder="请在此输入评论" name="comment"></textarea>
-            <button type="submit" name="submit"><a href="/add_comment">提交</button>
+            <button type="submit" name="submit"><a href="/add_comment/?movie_name={{movie.movie_name}}">提交</a></button>
         {% else %}
             </br><textarea rows="10" cols="30" name="comment">{{comment.comment}}</textarea>
-            <button type="submit" name="submit"><a href="/delete_comment">删除</button>
-            <button type="submit" name="submit"><a href="/modify_comment">修改</button>
+            <button type="submit" name="submit"><a href="/delete_comment/?movie_name={{movie.movie_name}}">删除</a></button>
+            <button type="submit" name="submit"><a href="/modify_comment/?movie_name={{movie.movie_name}}">修改</a></button>
         {% endif %}
     {% else %}
         <p><span style="color: red;">请先登录！</p>   

@@ -2,6 +2,7 @@ from django.http import HttpResponse,Http404
 from .models import *
 from django.shortcuts import render,get_object_or_404
 from django.conf import settings
+from django.shortcuts import redirect
 
 # Create your views here.
 
@@ -42,24 +43,25 @@ def actor(request):
     movie = Play.objects.filter(actor_name=q)
     return render(request, 'actor.html', {'actor': actor, 'movie': movie})
 
-def movie(request): #wrong
-    return render(request, "movie.html",{})
+def movie(request): 
     q = request.GET.get('movie_name')
+    login = request.session.get('login',None)
+    user = request.session.get('user_name',None)
     movie = Movie.objects.get(movie_name=q)
+    director = Direct.objects.filter(movie_name=q)
     actor = Play.objects.filter(movie_name=q)
-    label = Label.objects.filter(movie_name=q)
-    comment = Comment.objects.filter(movie_name=q).order_by('-comment_date')
+    comment = Comment.objects.filter(movie_name=q)
     
-    if not request.session['login'] :
-        return render(request, 'movie.html', {'actor': actor, 'movie': movie, 'label': label, 'comment': comment})
+    if not login:
+        return render(request, 'movie.html', {'actor': actor, 'director': director, 'movie': movie, 'comment': comment})
+        
+    if Comment.objects.filter(user_name=user) : 
+        return render(request, 'movie.html', {'actor': actor, 'director': director, 'movie': movie, 'comment': comment})
     
-    try :
-        x = Comment.objects.get(user_name=request.session['user_name'])   
-    except User.DoesNotExist :
-        n_exist = True
-        return render(request, 'movie.html', {'actor': actor, 'movie': movie, 'label': label, 'comment': comment, 'n_exist': n_exist})
+    n_exist = True   
+    return render(request, 'movie.html', {'actor': actor, 'director': director, 'movie': movie, 'comment': comment, 'n_exist': n_exist})  
     
-    return render(request, 'movie.html', {'actor': actor, 'movie': movie, 'label': label, 'comment': comment})
+    
 
 def director(request):
     q = request.GET.get('director_name')
@@ -151,31 +153,31 @@ def check(request):
         return render(request, 'login.html', {'message': message,'success':success})
 
 def add_comment(request): #wrong
-    movie = request.GET.get('movie')
+    q = request.GET.get('movie_name')
+    p = request.session.get('user_name',None)
     grade = request.GET.get('score')
     comment = request.GET.get('comment')
-    q = Comment()
-    q.movie_name = movie
-    return render(request, "Frontpage.html",{'photo':'timg.jpeg'})
-    q.user_name = request.session['user_name']
-    q.grade = grade 
-    q.comment = comment
+      
+    #if not comment :
     
-    q.save()
-    return redirect("movie")
+    movie = Movie.objects.get(movie_name=q)   
+    user = User.objects.get(user_name=p)
+    Comment.objects.create(movie_name=movie,user_name=p,grade=grade,comment=comment)
+    return redirect('/movie/?movie_name=%s' % (movie)) 
+    
 
-def delete_comment(request): #wrong
-    movie =  request.GET.get('movie')
-    user = request.session['user_name']
-    q = Comment.objects.get(movie_name=movie, user_name=user)
-    q.delete()
-    return redirect("movie")
+    
+def delete_comment(request): #wrong  
+    movie = request.GET.get('movie_name')
+    user = request.GET.get('user')
+    Comment.objects.get(movie_name=movie, user_name=user).delete()
+    return redirect('/movie/?movie_name=%s' % (movie))
 
 def modify_comment(request): #wrong
-    movie =  request.GET.get('movie')
-    user = request.session['user_name']
+    movie =  request.GET.get('movie_name')
+    user = request.GET.get('user')
     new_grade = request.GET.get('score')
     new_comment = request.GET.get('comment')
     q = Comment.objects.get(movie_name=movie, user_name=user)
     q.update(comment=new_comment,grade=new_grade)
-    return redirect("movie")
+    return redirect('/movie/?movie_name=%s' % (movie))
