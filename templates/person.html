@@ -18,6 +18,10 @@
             <div class='info'>
             <ul>
                 <li>性别： {{person.gender}} </li>
+                <li>出生日期：{{person.birthdate}}</li>
+                <li>星座：{{person.constellation}}</li>
+                <li>籍贯：{{person.birthplace}}</li>
+                <li>职业：{{person.occupation}}</li>
             </ul>
             </div>
         </div>
@@ -29,20 +33,35 @@
                 <span class='short'>{{person.intro}}</span>
             </div>
         </div>
-        <div id='movies'>
-            <p>参演电影</p>
-            {% for post in movie %}
+        <div id='movie_d'>
+            <div class='hd'>
+                <h2>指导电影</h2>
+            </div>
+            {% for post in movie_d %}
             <div>
-                </br><a href="/movie/?movie_name={{post.movie_name}}">{{post.movie_name}}</a>
+                </br><a href="/movie/?movie_name={{post.movie_name.movie_name}}">{{post.movie_name.movie_name}}</a>
             </div>
             {% empty %}
             <div class="no-post">
-                没有搜索到符合条件的文章
+                暂无
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
+        <div id='movie_a'>
+            <div class='hd'>
+                <h2>参演电影</h2>
+            </div>
+            {% for post in movie_a %}
+            <div>
+                </br><a href="/movie/?movie_name={{post.movie_name.movie_name}}">{{post.movie_name.movie_name}}</a>
+            </div>
+            {% empty %}
+            <div class="no-post">
+                暂无
+            </div>
+            {% endfor %}
+        </div>
     </div>
-
 </form>
 
 {% endblock context %}

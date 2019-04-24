@@ -2,87 +2,115 @@
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
+{% block css %}
+  {% load staticfiles %}
+  <link rel="stylesheet" media="screen" type="text/css" href="{% static 'css/actor.css' %}">
+{% endblock css %}
+
 {% block context %}
 
 {% csrf_token %}
-
-	</br><p>{{ movie.movie_name }}</p>
-    <!--<p>{{ movie.photo }}</p>-->
-    
-    </br><p>导演</p>
-    
-    {% for post in director %}
-    <div>
-        </br><a href="/person/?name={{post.director_name.name}}">{{post.director_name.name}}</a>
-    </div>
-    {% empty %}
-    <div class="no-post">
-        没有搜索到符合条件的文章
-    </div>
-    {% endfor %}
-    
-    </br><p>演员</p>
-    
-    {% for post in actor %}
-    <div>
-        </br><a href="/person/?name={{post.actor_name.name}}">{{post.actor_name.name}}</a>
-    </div>
-    {% empty %}
-    <div class="no-post">
-        没有搜索到符合条件的文章
-    </div>
-    {% endfor %}
-    
-    {% for post in comment %}
-    <div>
-        </br><p>{{post.user_name.user_name}}</p>
-        </br><p>{{post.grade}}</p>
-        </br><p>{{post.comment}}</p>
-    </div>
-    {% empty %}
-    <div class="no-post">
-        没有搜索到符合条件的文章
-    </div>
-    {% endfor %}
-   
-    {% if request.session.login %}
-        <!--<label><input name="score" type="radio" value=5 checked />5</label>
-        <label><input name="score" type="radio" value=4 />4 </label>
-        <label><input name="score" type="radio" value=3 />3 </label>
-        <label><input name="score" type="radio" value=2 />2 </label>
-        <label><input name="score" type="radio" value=1 />1 </label>    -->
-        {% if n_exist %}
-        <form action="/add_comment/",method='get'>
-            <label><input name="score" type="radio" value=5 checked />5</label>
-            <label><input name="score" type="radio" value=4 />4 </label>
-            <label><input name="score" type="radio" value=3 />3 </label>
-            <label><input name="score" type="radio" value=2 />2 </label>
-            <label><input name="score" type="radio" value=1 />1 </label> 
-            </br><textarea rows="10" cols="30" placeholder="请在此输入评论" name="comment"></textarea>
-            <input type="text" name="movie_name" style="display:none" value={{movie.movie_name}}></input>
-            <button type="submit" name="submit">提交</button>
-        </form>
+<form action="/movie/?movie_name" method="get"> 
+    <div id='wrapper'>
+        <h1>{{movie.movie_name}}</h1>
+        <div id='headline'>
+            <div class='pic'>
+                <img src="/static/media/{{movie.photo}}">
+            </div>
+            <div class='info'>
+            <ul>
+                <li>上映日期： {{movie.movie_date}} </li>
+                <li>类型：{{movie.type}}</li>
+                <li>制片国家/地区：{{movie.place}}</li>
+                <li>语言：{{movie.language}}</li>
+                <li>片长：{{movie.length}}</li>
+                <li>又名：{{movie.rename}}</li>
+            </ul>
+            </div>
+        </div>
+        <div id='director'>
+            <div class='hd'>
+                <h2>导演</h2>
+            </div>
+            {% for post in director %}
+            <div>
+                </br><a href="/person/?name={{post.director_name.name}}">{{post.director_name.name}}</a>
+            </div>
+            {% empty %}
+            <div class="no-post">
+                暂无
+            </div>
+            {% endfor %}
+        </div>
+        <div id='actor'>
+            <div class='hd'>
+                <h2>主演</h2>
+            </div>
+            {% for post in actor %}
+            <div>
+                </br><a href="/person/?name={{post.actor_name.name}}">{{post.actor_name.name}}</a>
+            </div>
+            {% empty %}
+            <div class="no-post">
+                暂无
+            </div>
+            {% endfor %}
+        </div>
+        <div id='comment'>
+            <div class='hd'>
+                <h2>评论</h2>
+            </div>
+            {% for post in comment %}
+            <div>
+                </br><p>{{post.user_name.user_name}}</p>
+                </br><p>{{post.grade}}</p>
+                </br><p>{{post.comment}}</p>
+            </div>
+            {% empty %}
+            <div class="no-post">
+                暂无评论
+            </div>
+            {% endfor %}
+        </div>
+        {% if request.session.login %}
+            {% if n_exist %}
+            <div class='hd'>
+                <h2>添加评论</h2>
+            </div>
+            <form action="/add_comment/",method='get'>
+                <label><input name="score" type="radio" value=5 checked />5</label>
+                <label><input name="score" type="radio" value=4 />4 </label>
+                <label><input name="score" type="radio" value=3 />3 </label>
+                <label><input name="score" type="radio" value=2 />2 </label>
+                <label><input name="score" type="radio" value=1 />1 </label> 
+                </br><textarea rows="10" cols="30" placeholder="请在此输入评论" name="comment"></textarea>
+                <input type="text" name="movie_name" style="display:none" value={{movie.movie_name}}></input>
+                <button type="submit" name="submit">提交</button>
+            </form>
+            {% else %}
+            <div class='hd'>
+                <h2>修改/删除评论</h2>
+            </div>
+            <form action="/modify_comment/",method='get'>
+                <label><input name="score" type="radio" value=5 checked />5</label>
+                <label><input name="score" type="radio" value=4 />4 </label>
+                <label><input name="score" type="radio" value=3 />3 </label>
+                <label><input name="score" type="radio" value=2 />2 </label>
+                <label><input name="score" type="radio" value=1 />1 </label>
+                </br><textarea rows="10" cols="30" name="comment">{{uc.comment}}</textarea>
+                <input type="text" name="movie_name" style="display:none" value={{movie.movie_name}}></input>
+                <button type="submit" name="submit">修改</button>
+            </form>
+            <form action="/delete_comment/",method='get'>
+                <input type="text" name="movie_name" style="display:none" value={{movie.movie_name}}></input>
+                <button type="submit" name="submit">删除</button>
+            </form>
+            {% endif %}
         {% else %}
-        <form action="/modify_comment/",method='get'>
-            <label><input name="score" type="radio" value=5 checked />5</label>
-            <label><input name="score" type="radio" value=4 />4 </label>
-            <label><input name="score" type="radio" value=3 />3 </label>
-            <label><input name="score" type="radio" value=2 />2 </label>
-            <label><input name="score" type="radio" value=1 />1 </label>
-            </br><textarea rows="10" cols="30" name="comment">{{uc.comment}}</textarea>
-            <input type="text" name="movie_name" style="display:none" value={{movie.movie_name}}></input>
-            <button type="submit" name="submit">修改</button>
-        </form>
-        <form action="/delete_comment/",method='get'>
-            <input type="text" name="movie_name" style="display:none" value={{movie.movie_name}}></input>
-            <button type="submit" name="submit">删除</button>
-        </form>
-        {% endif %}
-    {% else %}
-        <p><span style="color: red;">请先登录！</p>   
-    {% endif %}
+            <p><span style="color: red;">请先登录！</p>   
+        {% endif %} 
 
-<form action="/movie/?movie_name" method="get">    
+    </div>
 </form>
 
 {% endblock context %}

@@ -6,6 +6,18 @@ from django.shortcuts import redirect
 
 # Create your views here.
 
+def rep(s):
+    li = []
+    a = []
+    for i in s:
+        li.append(i)
+    for i in range(len(li)):
+        if li[i] == '%' and l[i+1] == '2' and l[i+2] == '0':
+            a+=' '
+        else :
+            a+=li[i]
+    return a
+
 def Frontpage(request):
     return render(request, "Frontpage.html",{'photo':'timg.jpeg'})
 
@@ -35,7 +47,7 @@ def person(request):
     person = Person.objects.get(name=q)    
     movie_d = Direct.objects.filter(director_name=q)
     movie_a = Play.objects.filter(actor_name=q)
-    return render(request, 'person.html', {'person': person, 'movie_d': movie_d, 'movie_a':movie_a})
+    return render(request, 'person.html', {'person': person, 'movie_d': movie_d, 'movie_a': movie_a})
 
 def movie(request): 
     q = request.GET.get('movie_name')
@@ -64,11 +76,11 @@ def user(request):
     return render(request, 'user.html', {'user': user})    
  
 def person_all(request):
-    person_list = Person.objects.all()
+    person_list = Person.objects.all().order_by('name')
     return render(request, 'results.html', {'person_list': person_list})
 	
 def movie_all(request):
-    movie_list = Movie.objects.all()
+    movie_list = Movie.objects.all().order_by('movie_name')
     return render(request, 'results.html', {'movie_list': movie_list})
 
 def login(request):
