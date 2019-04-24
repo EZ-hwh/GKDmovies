@@ -7,20 +7,20 @@ chaper_url='https://movie.douban.com/celebrity/1274477/'
 #html = urllib.request.urlopen(req).read().decode('utf-8')
 #res = urllib.request.urlopen(url=',headers=headers)
 #html = res.read().decode('utf-8')
-f = open('b.txt','r')
+f = open('a.txt','r')
 html= f.read()
 
 soup = BeautifulSoup(html,'html.parser') 
 name = soup.find('h1').text.split(' ')[0]
 print(name)
-'''
+
 pic = soup.find('a',class_='nbg')
-with open('1.jpg','wb') as f:
+with open('./static/1.jpg','wb') as f:
         #print(pic.find('img')['src'])
         import requests
         r = requests.get(pic.find('img')['src'])
         f.write(r.content)
-'''
+
 info = soup.find(class_='info')
 for d in info.findAll('li'):
         j = d.get_text().strip().split(':')
@@ -40,7 +40,7 @@ for d in info.findAll('li'):
                 print(j[1].strip())
         #print(d.get_text())
 intro = soup.find(id='intro')
-if (intro.find(class_='all-hidden')):
+if (intro.find(class_='all hidden')):
         print(intro.find(class_='all hidden').text)
 else:
         print(intro.find(class_='bd').text)
