@@ -41,8 +41,7 @@ def movie(request):
     q = request.GET.get('movie_name')
     p = request.session.get('user_name',None)
     login = request.session.get('login',None)   
-    movie = Movie.objects.get(movie_name=q)
-    user = User.objects.get(user_name=p)
+    movie = Movie.objects.get(movie_name=q) 
     director = Direct.objects.filter(movie_name=q)
     actor = Play.objects.filter(movie_name=q)
     comment = Comment.objects.filter(movie_name=q)
@@ -50,6 +49,7 @@ def movie(request):
     if not login:
         return render(request, 'movie.html', {'actor': actor, 'director': director, 'movie': movie, 'comment': comment})
         
+    user = User.objects.get(user_name=p)
     if Comment.objects.filter(user_name=user,movie_name=movie) : 
         uc = Comment.objects.get(user_name=user,movie_name=movie)
         return render(request, 'movie.html', {'actor': actor, 'director': director, 'movie': movie, 'comment': comment, 'uc': uc})
