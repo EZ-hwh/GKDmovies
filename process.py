@@ -1,7 +1,7 @@
 #env/usr/bin python
 #encoding:utf-8
 
-rubbish=["Paolo Carlini","Margaret Rawlings","Rod Myers","Scott Joel Gizicki","詹姆斯·凯伦","布莱恩·豪威","杜汶泽","Niall O'Brien","Luigi De Luca"]
+rubbish=["孙靖","韩冬","Mark Phoenix","Emma Field-Rayner","Paolo Carlini","Margaret Rawlings","Rod Myers","Scott Joel Gizicki","詹姆斯·凯伦","布莱恩·豪威","杜汶泽","Niall O'Brien","Luigi De Luca"]
 #print(rubbish[0])
 
 import random
@@ -130,7 +130,7 @@ def person():
         #Play.objects.all().delete()
         #Direct.objects.all().delete()
 
-        for i in range(48,250):
+        for i in range(93,250):
                 res = urllib.request.urlopen(df['movie_url'][i])
                 html = res.read().decode('utf-8')
                 #print(html)
@@ -157,7 +157,7 @@ def person():
                                         elif(d.find(class_='pl').string=='主演'):
                                                 for e in d.findAll('a'): 
                                                         print(e.string)
-                                                        if (e.string not in rubbish):
+                                                        if (e.string not in rubbish)and(' ' not in e.string):
                                                                 if (not Person.objects.filter(name=e.string)):                                                           
                                                                         res = urllib.request.urlopen('https://movie.douban.com'+e['href'])
                                                                         html = res.read().decode('utf-8')    
