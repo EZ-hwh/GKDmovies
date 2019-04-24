@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% if error_msg %}
-    <p>{{ error_msg }}</p>
+  <p>{{ error_msg }}</p>
 {% endif %}
 
 {% block css %}
   {% load staticfiles %}
   <link rel="stylesheet" media="screen" type="text/css" href="{% static 'css/results.css' %}">
+  <link rel="stylesheet" media="screen" type="text/css" href="https://daneden.github.io/animate.css/">
 {% endblock css %}
 
 {% block search %}
@@ -45,10 +46,18 @@
     <div class='detail'>
       <div class='title'>
         <a href="/movie/?movie_name={{post.movie_name}}">{{post.movie_name}}</a>
-        </br>
-        <a>{{post.type}}</a>
-        </br>
-        <a>{{post.intro}}</a>
+      </div>
+      <div class='info'>
+        类型：  {{post.type}}
+      </div>
+      <div class='info'>
+        上映日期：  {{post.movie_date}}
+      </div>
+      <div class='info'>
+        片场：  {{post.length}}
+      </div>
+      <div class='info'>
+        语言：  {{post.language}}
       </div>
     </div>
   </div>

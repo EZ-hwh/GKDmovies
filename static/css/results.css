@@ -12,6 +12,7 @@
   padding: 0px;
 }
 .item-root {
+  background-color: white;
   margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -20,23 +21,35 @@
   justify-content: space-between;
 }
 .cover-link {
-  width: 120px;
-  height: 150px;
+  width: 150px;
+  max-height: 400px;
   margin-right: 15px;
   background: none;
 }
 .cover {
-  width: 120px;
-  height: 150px;
+  width: 150px;
+  max-height: 400px;
 }
 .detail {
   min-width: 0px;
   flex: 1 1 0%;
 }
 .detail .title {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 500;
   position: relative;
   top: -1px;
   overflow: visible;
+  margin-bottom: 10px;
+}
+.detail .info{
+  font-size: 15px;
+  position: relative;
+  overflow: visible;
+  margin-bottom: 7px;
+}
+a{
+
+  text-decoration:none;
+  color: rgb(13, 20, 78);
 }
