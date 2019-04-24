@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block context %}
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% csrf_token %}
+<form action="/change/" method="POST" enctype="multipart/form-data"> 
+    </br><input type="password" placeholder="password" name="password">
+    </br><input type="password" placeholder="repeat password" name="password2">
+    </br><textarea rows="10" cols="30" name="sig">{{user.signature}}</textarea>
+    </br><input type="file" id="image" name="photo" accept="image/gif, image/jpeg, image/png, image/jpg">
+    </br><button type="submit" name="submit">修改</button>
+    <p><span style="color: red;">{{ message }}</p>
+    {% if success %}
+        <meta http-equiv="refresh" content="1; url='/user'"> 
+    {% endif %} 
+</form>
+
+{% endblock context %}

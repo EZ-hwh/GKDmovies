@@ -3,6 +3,8 @@ from .models import *
 from django.shortcuts import render,get_object_or_404
 from django.conf import settings
 from django.shortcuts import redirect
+from django.views.decorators.csrf import csrf_exempt
+from PIL import Image
 
 # Create your views here.
 
@@ -182,3 +184,36 @@ def modify(request):
     p = request.session.get('user_name',None)
     user = User.objects.get(user_name=p)
     return render(request, 'modify.html', {'user': user})
+
+@csrf_exempt    
+def change(request):
+    p = request.session.get('user_name',None)
+    user = User.objects.get(user_name=p)
+    password = request.POST['password']
+    password2 = request.POST['password2']
+    sig = request.POST['sig']
+    try :
+        photo = request.FILES['photo']
+    except :
+        no = 1
+    
+    if password != password2 :
+        message = '两次密码输入不相符！'
+        return render(request, 'modify.html', {'user': user, 'message': message})
+    
+    q = User.objects.get(user_name=p)
+    
+    if password != '' :
+        q.password = password
+    q.signature = sig
+    
+    if no != 1:     
+        q.user_photo = photo
+        img=Image.open(photo)
+        img.save('./static/media/userset/'+ p +'.jpg')
+        
+    q.save()
+    user = User.objects.get(user_name=p)
+    message = '修改成功！'
+    success = 'success'  
+    return render(request, 'modify.html', {'user': user, 'message': message, 'success': success})

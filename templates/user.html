@@ -4,8 +4,13 @@
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-{% csrf_token %}
+{% block css %}
+  {% load staticfiles %}
+  <link rel="stylesheet" media="screen" type="text/css" href="{% static 'css/actor.css' %}">
+{% endblock css %}
+
 <form action="/modify/" method="get"> 
+{% csrf_token %}
     <div id='wrapper'>
         <h1>{{user.user_name}}</h1>
         <div id='headline'>
