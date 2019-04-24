@@ -12,22 +12,26 @@
   padding: 0px;
 }
 .item-root {
-  background-color: white;
+  background-color: rgb(227, 243, 240);
   margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  -moz-box-shadow:4px 10px 14px #333333; 
+  -webkit-box-shadow:4px 10px 14px #333333; 
+  box-shadow:4px 10px 14px #333333;
   -webkit-box-pack: justify;
   justify-content: space-between;
 }
 .cover-link {
-  width: 150px;
+  width: 130px;
   max-height: 400px;
   margin-right: 15px;
+  margin-bottom: -4px;
   background: none;
 }
 .cover {
-  width: 150px;
+  width: 130px;
   max-height: 400px;
 }
 .detail {
@@ -40,6 +44,7 @@
   position: relative;
   top: -1px;
   overflow: visible;
+  margin-top: 3px;
   margin-bottom: 10px;
 }
 .detail .info{

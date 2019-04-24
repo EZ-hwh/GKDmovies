@@ -6,7 +6,7 @@
 {% block css %}
   {% load staticfiles %}
   <link rel="stylesheet" media="screen" type="text/css" href="{% static 'css/results.css' %}">
-  <link rel="stylesheet" media="screen" type="text/css" href="https://daneden.github.io/animate.css/">
+  <link rel="stylesheet" media="screen" type="text/css" href="{% static 'css/animate.min.css' %}">
 {% endblock css %}
 
 {% block search %}
@@ -21,13 +21,25 @@
 <div id='wrapper'>
   <div class='classcification'>演员/导演</div>
   {% for post in person_list %}
-  <div class='item-root'>
+  <div class='wow slideInUp animated item-root'>
     <a href="/person/?name={{post.name}}" class='cover-link'>
       <img src="/static/media/{{post.photo}}" class='cover'>
     </a>
     <div class='detail'>
       <div class='title'>
         <a href="/person/?name={{post.name}}">{{post.name}}</a>
+      </div>
+      <div class='info'>
+        性别：  {{post.gender}}
+      </div>
+      <div class='info'>
+        出生年月：  {{post.date}}
+      </div>
+      <div class='info'>
+        职业：  {{post.occupation}}
+      </div>
+      <div class='info'>
+
       </div>
     </div>
   </div>
@@ -39,7 +51,7 @@
 
   <div class='classcification'>电影</div>
   {% for post in movie_list %}
-  <div class='item-root'>
+  <div class='wow slideInUp animated item-root'>
     <a href="/movie/?movie_name={{post.movie_name}}" class='cover-link'>
       <img src="/static/media/{{post.photo}}" class='cover'>
     </a>
@@ -67,4 +79,14 @@
     </div>
   {% endfor %}
 </div>
+
+
 {% endblock context %}
+
+{% block js %}
+  {% load staticfiles %}
+  <script src="{% static 'js/wow.min.js' %}"></script>
+  <script>
+    new WOW().init();
+  </script>
+{% endblock js %}

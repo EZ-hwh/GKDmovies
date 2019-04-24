@@ -6,7 +6,7 @@ form {
   width: 300px;
   margin: 0 auto;
 }
-.d1 {background: #A3D0C3;}
+.d1 {background: rgb(255, 255, 255);}
 .d1 input {
   width: 100%;
   height: 42px;
