@@ -1,7 +1,7 @@
 #env/usr/bin python
 #encoding:utf-8
 
-rubbish=["孙靖","韩冬","Mark Phoenix","Emma Field-Rayner","Paolo Carlini","Margaret Rawlings","Rod Myers","Scott Joel Gizicki","詹姆斯·凯伦","布莱恩·豪威","杜汶泽","Niall O'Brien","Luigi De Luca"]
+rubbish=["曾心怡","吴念真","张育邦","孙靖","韩冬","Mark Phoenix","Emma Field-Rayner","Paolo Carlini","Margaret Rawlings","Rod Myers","Scott Joel Gizicki","詹姆斯·凯伦","布莱恩·豪威","杜汶泽","Niall O'Brien","Luigi De Luca"]
 #print(rubbish[0])
 
 import random
@@ -82,6 +82,8 @@ def movie():
 
 def a(html):
         soup = BeautifulSoup(html,'html.parser') 
+        if (not soup.find('h1')):
+                return False
         name = soup.find('h1').text.split(' ')[0]
         print(name)
         number = str(random.randint(1000000,9999999))
@@ -124,13 +126,14 @@ def a(html):
                 c=intro.find(class_='bd').text
         intro = soup.find(class_='all hidden')
         Person.objects.get_or_create(name=name,intro=c.strip(),constellation=constellation,gender=gender,birthdate=birthdate,birthplace=birthplace,occupation=occupation,photo=photo)
+        return True
 
 def person():
         #Person.objects.all().delete()
         #Play.objects.all().delete()
         #Direct.objects.all().delete()
 
-        for i in range(93,250):
+        for i in range(3,5):
                 res = urllib.request.urlopen(df['movie_url'][i])
                 html = res.read().decode('utf-8')
                 #print(html)
@@ -147,21 +150,24 @@ def person():
                                 if (d.find(class_='pl')):
                                         if(d.find(class_='pl').string=='导演'):
                                                 for e in d.findAll('a'):
-                                                        if (not Person.objects.filter(name=e.string)):                                                           
+                                                        print(e.string.strip())
+                                                        if (not Person.objects.filter(name=e.string.strip())):                                                           
                                                                 res = urllib.request.urlopen('https://movie.douban.com'+e['href'])
                                                                 #print('https://movie.douban.com'+e['href'])
                                                                 html = res.read().decode('utf-8')    
                                                                 a(html)
-                                                        Direct.objects.get_or_create(movie_name = Movie.objects.get(movie_name=name),director_name = Person.objects.get(name=e.string))
+                                                        Direct.objects.get_or_create(movie_name = Movie.objects.get(movie_name=name),director_name = Person.objects.get(name=e.string.strip()))
                                                         
                                         elif(d.find(class_='pl').string=='主演'):
+                                                t = True
                                                 for e in d.findAll('a'): 
-                                                        print(e.string)
+                                                        print(e.string.strip())
                                                         if (e.string not in rubbish)and(' ' not in e.string):
-                                                                if (not Person.objects.filter(name=e.string)):                                                           
+                                                                if (not Person.objects.filter(name=e.string.strip())):                                                           
                                                                         res = urllib.request.urlopen('https://movie.douban.com'+e['href'])
                                                                         html = res.read().decode('utf-8')    
-                                                                        a(html)
-                                                                Play.objects.get_or_create(movie_name = Movie.objects.get(movie_name=name),actor_name = Person.objects.get(name=e.string))                                                         
+                                                                        t = a(html)
+                                                                if t:
+                                                                        Play.objects.get_or_create(movie_name = Movie.objects.get(movie_name=name),actor_name = Person.objects.get(name=e.string.strip()))                                                         
 
 person()
