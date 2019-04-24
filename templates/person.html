@@ -7,6 +7,14 @@
   <link rel="stylesheet" media="screen" type="text/css" href="{% static 'css/actor.css' %}">
 {% endblock css %}
 
+{% block search %}
+    <form method="get" action="/search/">
+        {% csrf_token %}
+        <input type="text" placeholder="search" name="index">
+        <button type="submit" name="submit">搜索</button>
+    </form>
+{% endblock search %}
+
 {% block context %}
 <form action="/person/?name" method="get">
     <div id='wrapper'>

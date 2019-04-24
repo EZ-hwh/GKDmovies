@@ -6,18 +6,6 @@ from django.shortcuts import redirect
 
 # Create your views here.
 
-def rep(s):
-    li = []
-    a = []
-    for i in s:
-        li.append(i)
-    for i in range(len(li)):
-        if li[i] == '%' and l[i+1] == '2' and l[i+2] == '0':
-            a+=' '
-        else :
-            a+=li[i]
-    return a
-
 def Frontpage(request):
     return render(request, "Frontpage.html",{'photo':'timg.jpeg'})
 
@@ -180,8 +168,17 @@ def modify_comment(request): #wrong
     user = User.objects.get(user_name=p)
     new_grade = request.GET.get('score')
     new_comment = request.GET.get('comment')
+    
+    if not new_comment :
+        return redirect('/movie/?movie_name=%s' % (movie.movie_name)) 
+    
     q = Comment.objects.get(movie_name=movie, user_name=user)
     q.comment = new_comment
     q.grade = new_grade
     q.save()
     return redirect('/movie/?movie_name=%s' % (movie.movie_name))
+    
+def modify(request):
+    p = request.session.get('user_name',None)
+    user = User.objects.get(user_name=p)
+    return render(request, 'modify.html', {'user': user})

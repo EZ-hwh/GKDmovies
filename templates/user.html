@@ -4,12 +4,22 @@
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-<form action="/user/?user_name" method="get">
 {% csrf_token %}
-	<p>{{ user.user_name }}</p>
-	<p>{{ user.signature }}</a></p>
-    <!--<p>{{ user.user_photo }}</p>-->
-    
+<form action="/modify/" method="get"> 
+    <div id='wrapper'>
+        <h1>{{user.user_name}}</h1>
+        <div id='headline'>
+            <div class='pic'>
+                <img src="/static/media/{{user.user_photo}}">
+            </div>
+            <div class='info'>
+            <ul>
+                <li>个性签名： {{user.signature}} </li>
+            </ul>
+            </div>
+            <button type="submit" name="submit">修改个人信息</button>
+        </div>
+    </div>
 </form>
 
 {% endblock context %}
