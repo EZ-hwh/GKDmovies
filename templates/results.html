@@ -19,6 +19,7 @@
 
 {% block context %}
 <div id='wrapper'>
+  {% if not movie_all %}
   <div class='classcification'>演员/导演</div>
   {% for post in person_list %}
   <div class='wow slideInUp animated item-root'>
@@ -48,7 +49,9 @@
       没有搜索到符合条件的文章
     </div>
   {% endfor %}
+  {% endif %}
 
+  {% if not person_all %}
   <div class='classcification'>电影</div>
   {% for post in movie_list %}
   <div class='wow slideInUp animated item-root'>
@@ -78,6 +81,7 @@
       没有搜索到符合条件的文章
     </div>
   {% endfor %}
+  {% endif %}
 </div>
 
 

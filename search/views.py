@@ -67,11 +67,13 @@ def user(request):
  
 def person_all(request):
     person_list = Person.objects.all().order_by('name')
-    return render(request, 'results.html', {'person_list': person_list})
+    person_all = True
+    return render(request, 'results.html', {'person_list': person_list, 'person_all': person_all})
 	
 def movie_all(request):
     movie_list = Movie.objects.all().order_by('movie_name')
-    return render(request, 'results.html', {'movie_list': movie_list})
+    movie_all = True
+    return render(request, 'results.html', {'movie_list': movie_list, 'movie_all': movie_all})
 
 def login(request):
     return render(request, 'login.html', {})

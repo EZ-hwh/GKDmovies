@@ -4,11 +4,11 @@
     {% csrf_token %}
 	
 	</br>
-	</br><input type="text" placeholder="user" name="user">
-	</br><input type="password" placeholder="password" name="password">
-    </br><input type="password" placeholder="repeat password" name="password2">
-	</br><button type="submit" name="submit">register</button>
-    <p><span style="color: red;">{{ message }}</p>
+	</br><input type="text" placeholder="user" name="user" style="height:25px;width:150px;position:relative;top:100px;left:500px;">
+	</br><input type="password" placeholder="password" name="password" style="height:25px;width:150px;position:relative;top:120px;left:500px;">
+    </br><input type="password" placeholder="repeat password" name="password2" style="height:25px;width:150px;position:relative;top:140px;left:500px;">
+	</br><button type="submit" name="submit" style="height:30px;width:50px;position:relative;top:140px;left:-740px;">register</button>
+    </br><div><span style="height:25px;width:50px;position:relative;top:180px;left:500px;color:red;">{{ message }}</div>  
     {% if success %}
         <meta http-equiv="refresh" content="1; url='/login/'"> 
     {% endif %}    
