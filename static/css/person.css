@@ -1,0 +1,96 @@
+#wrapper {
+    width: 800px;
+    margin: 0 auto;
+    border-left: 200px;
+    margin-top: 30px;
+}
+.content {
+    margin-top: 30px;
+}
+h1 {
+    font-size: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 50px;
+}
+#headline {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+#headline .pic {
+    width: 175px;
+    height: 250px;
+    float: left;
+    text-align: center;
+}
+#headline img {
+    height: 250px;
+    width: 175px;
+}
+.info {
+    float: left;
+    text-align: left;
+    line-height: 22px;
+}
+.info ul {
+    margin-left: 20px;
+}
+.info li {
+    width: 438px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+#intro, #movie{
+    margin-bottom: 25px;
+}
+#intro .hd {
+    margin-bottom: 10px;
+}
+#intro .bd {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.attend {
+    background-color: rgb(227, 243, 240);
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.cover-link {
+    width: 75px;
+    max-height: 400px;
+    margin-right: 15px;
+    margin-bottom: -4px;
+    background: none;
+}
+.cover {
+    width: 75px;
+    max-height: 400px;
+}
+
+a{
+    text-decoration:none;
+    color: rgb(13, 20, 78);
+}
+.detail {
+    min-width: 0px;
+    flex: 1 1 0%;
+  }
+.detail .title{
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  top: -1px;
+  overflow: visible;
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+.detail .info{
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: rgb(119, 103, 103);
+    position: relative;
+    overflow: visible;
+}

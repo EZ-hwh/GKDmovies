@@ -4,14 +4,16 @@
 
 {% block css %}
   {% load staticfiles %}
-  <link rel="stylesheet" media="screen" type="text/css" href="{% static 'css/actor.css' %}">
+  <link rel="stylesheet" media="screen" type="text/css" href="{% static 'css/movie.css' %}">
 {% endblock css %}
 
 {% block search %}
     <form method="get" action="/search/">
         {% csrf_token %}
-        <input type="text" placeholder="search" name="index">
-        <button type="submit" name="submit">搜索</button>
+        <div class="search">
+            <input type="text" placeholder="search" name="index">
+            <button type="submit" name="submit">搜索</button>
+        </div>
     </form>
 {% endblock search %}
 
@@ -74,10 +76,10 @@
         </div>
         <div id='comment'>
             <div class='hd'>
-                <h2>评论</h2>
+                <h2>评论区</h2>
             </div>
             {% for post in comment %}
-            <div>
+            <div class="comment">
                 </br><p>{{post.user_name.user_name}}</p>
                 </br><p>{{post.grade}}</p>
                 </br><p>{{post.comment}}</p>
@@ -102,9 +104,9 @@
             <label><input name="score" type="radio" value=3 />3 </label>
             <label><input name="score" type="radio" value=2 />2 </label>
             <label><input name="score" type="radio" value=1 />1 </label> 
-            </br><textarea rows="10" cols="30" placeholder="请在此输入评论" name="comment"></textarea>
+            </br><textarea rows="10" cols="90" placeholder="请在此输入评论" name="comment"></textarea>
             <input type="text" name="movie_name" style="display:none" value='{{movie.movie_name}}'></input>
-            <button type="submit" name="submit">提交</button>
+            <button type="submit" name="submit" style="border:2px; border-color:black;">提交</button>
         </form>
         {% else %}
         <div class='hd'>
@@ -116,9 +118,9 @@
             <label><input name="score" type="radio" value=3 />3 </label>
             <label><input name="score" type="radio" value=2 />2 </label>
             <label><input name="score" type="radio" value=1 />1 </label>
-            </br><textarea rows="10" cols="30" name="comment">{{uc.comment}}</textarea>
+            </br><textarea rows="10" cols="90" name="comment">{{uc.comment}}</textarea>
             <input type="text" name="movie_name" style="display:none" value='{{movie.movie_name}}'></input>
-            <button type="submit" name="submit">修改</button>
+            <button type="submit" name="submit" style="border:2px; border-color:black;">修改</button>
         </form>
         <form action="/delete_comment/",method='get'>
             <input type="text" name="movie_name" style="display:none" value='{{movie.movie_name}}'></input>
