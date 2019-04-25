@@ -52,16 +52,25 @@
             </div>
             <ul class="celebrities-list from-subject __oneline">
             {% for post in director %}
-            <li class="celebrity">
-                <a href="/person/?name={{post.director_name.name}}">
-                    <img src="/static/media/{{post.director_name.photo}}">
-                </a>
-                <div class="info">
-                    <span class="name">
+                <div class='attend'>
+                    <a href="/person/?name={{post.director_name.name}}" class='cover-link'>
+                        <img src="/static/media/{{post.director_name.photo}}" class='cover'>
+                    </a>
+                <div class='detail'>
+                    <div class='title'>
                         <a href="/person/?name={{post.director_name.name}}">{{post.director_name.name}}</a>
-                    </span>
+                    </div>
+                    <div class='info'>
+                        性别：  {{post.director_name.gender}}
+                    </div>
+                    <div class='info'>
+                        出生年月：  {{post.director_name.birthdate}}
+                    </div>
+                    <div class='info'>
+                        职业：  {{post.director_name.occupation}}
+                    </div>
                 </div>
-            </li>
+                </div>
             {% empty %}
             <div class="no-post">
                 暂无
@@ -74,9 +83,25 @@
                 <h2>主演</h2>
             </div>
             {% for post in actor %}
-            <div>
-                </br><a href="/person/?name={{post.actor_name.name}}">{{post.actor_name.name}}</a>
-            </div>
+                <div class='attend'>
+                    <a href="/person/?name={{post.actor_name.name}}" class='cover-link'>
+                        <img src="/static/media/{{post.actor_name.photo}}" class='cover'>
+                    </a>
+                <div class='detail'>
+                    <div class='title'>
+                        <a href="/person/?name={{post.actor_name.name}}">{{post.actor_name.name}}</a>
+                    </div>
+                    <div class='info'>
+                        性别：  {{post.actor_name.gender}}
+                    </div>
+                    <div class='info'>
+                        出生年月：  {{post.actor_name.birthdate}}
+                    </div>
+                    <div class='info'>
+                        职业：  {{post.actor_name.occupation}}
+                    </div>
+                </div>
+                </div>
             {% empty %}
             <div class="no-post">
                 暂无
