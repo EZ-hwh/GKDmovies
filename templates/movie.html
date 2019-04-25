@@ -103,7 +103,7 @@
             <label><input name="score" type="radio" value=2 />2 </label>
             <label><input name="score" type="radio" value=1 />1 </label> 
             </br><textarea rows="10" cols="30" placeholder="请在此输入评论" name="comment"></textarea>
-            <input type="text" name="movie_name" style="display:none" value={{movie.movie_name}}></input>
+            <input type="text" name="movie_name" style="display:none" value='{{movie.movie_name}}'></input>
             <button type="submit" name="submit">提交</button>
         </form>
         {% else %}
@@ -117,11 +117,11 @@
             <label><input name="score" type="radio" value=2 />2 </label>
             <label><input name="score" type="radio" value=1 />1 </label>
             </br><textarea rows="10" cols="30" name="comment">{{uc.comment}}</textarea>
-            <input type="text" name="movie_name" style="display:none" value={{movie.movie_name}}></input>
+            <input type="text" name="movie_name" style="display:none" value='{{movie.movie_name}}'></input>
             <button type="submit" name="submit">修改</button>
         </form>
         <form action="/delete_comment/",method='get'>
-            <input type="text" name="movie_name" style="display:none" value={{movie.movie_name}}></input>
+            <input type="text" name="movie_name" style="display:none" value='{{movie.movie_name}}'></input>
             <button type="submit" name="submit">删除</button>
         </form>
         {% endif %}
