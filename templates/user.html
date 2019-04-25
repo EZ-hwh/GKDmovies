@@ -6,7 +6,7 @@
 
 {% block css %}
   {% load staticfiles %}
-  <link rel="stylesheet" media="screen" type="text/css" href="{% static 'css/actor.css' %}">
+  <link rel="stylesheet" media="screen" type="text/css" href="{% static 'css/person.css' %}">
 {% endblock css %}
 
 <form action="/modify/" method="get"> 
@@ -22,7 +22,7 @@
                 <li>个性签名： {{user.signature}} </li>
             </ul>
             </div>
-            <button type="submit" name="submit">修改个人信息</button>
+            <button type="submit" name="submit" style="height:30px;width:200px;position:relative;top:170px;left:-445px;font-size:20px">修改个人信息</button>
         </div>
     </div>
 </form>

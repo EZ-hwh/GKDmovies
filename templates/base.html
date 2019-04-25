@@ -26,7 +26,7 @@
                 <li><a href="/login">login</a></li>
                 <li><a href="/register">register</a></li>        
             {% endif %}       
-            <li><a href="#">下载豆瓣客户端</a></li>
+            <!--<li><a href="#">下载豆瓣客户端</a></li>-->
             <li>{% block search %}
                 
             {% endblock search %}</li>
@@ -34,7 +34,8 @@
     </header>
     {% block context %}
     {% endblock context %}
-</body>
+    <div class="footer" style="height:60px;margin-top:20px;></div>
 </html>
+</body>
 {% block js %}
 {% endblock js %}

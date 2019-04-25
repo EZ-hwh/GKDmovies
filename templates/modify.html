@@ -6,15 +6,16 @@
 
 {% csrf_token %}
 <form action="/change/" method="POST" enctype="multipart/form-data"> 
-    </br><input type="password" placeholder="password" name="password">
-    </br><input type="password" placeholder="repeat password" name="password2">
-    </br><textarea rows="10" cols="30" name="sig">{{user.signature}}</textarea>
-    </br><input type="file" id="image" name="photo" accept="image/gif, image/jpeg, image/png, image/jpg">
-    </br><button type="submit" name="submit">修改</button>
-    <p><span style="color: red;">{{ message }}</p>
+    </br><input type="password" placeholder="password" name="password" style="height:25px;width:150px;position:relative;top:80px;left:450px;">
+    </br><input type="password" placeholder="repeat password" name="password2" style="height:25px;width:150px;position:relative;top:100px;left:450px;">
+    </br><textarea rows="10" cols="30" name="sig" placeholder="signature" style="height:100px;width:300px;position:relative;top:120px;left:450px;font-size:16px">{{user.signature}}</textarea>
+    </br><input type="file" id="image" name="photo" accept="image/gif, image/jpeg, image/png, image/jpg" style="height:25px;width:180px;position:relative;top:140px;left:450px;">
+    </br><button type="submit" name="submit" style="height:30px;width:50px;position:relative;top:130px;left:-780px;font-size:20px">修改</button>
+    </br><div><span style="height:25px;width:50px;position:relative;top:170px;left:460px;color:red">{{ message }}</div>
     {% if success %}
         <meta http-equiv="refresh" content="1; url='/user'"> 
     {% endif %} 
 </form>
 
 {% endblock context %}
+ 

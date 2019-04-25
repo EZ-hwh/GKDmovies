@@ -11,8 +11,8 @@
     <form method="get" action="/search/">
         {% csrf_token %}
         <div class="search">
-            <input type="text" placeholder="search" name="index">
-            <button type="submit" name="submit">搜索</button>
+            <input type="text" placeholder="search" name="index" style="height:20px;width:120px">
+            <button type="submit" name="submit" style="height:20px;width:50px;color:white">搜索</button>
         </div>
     </form>
 {% endblock search %}
@@ -78,11 +78,25 @@
             <div class='hd'>
                 <h2>评论区</h2>
             </div>
+            <script>
+                n5=0;
+                n4=0;
+                n3=0;
+                n2=0;
+                n1=0;
+            </script>
             {% for post in comment %}
             <div class="comment">
                 </br><p>{{post.user_name.user_name}}</p>
                 </br><p>{{post.grade}}</p>
                 </br><p>{{post.comment}}</p>
+                <script>
+                    if ({{post.grade}}==5) {n5=n5+1;}
+                    if ({{post.grade}}==4) {n4=n4+1;}
+                    if ({{post.grade}}==3) {n3=n3+1;}
+                    if ({{post.grade}}==2) {n2=n2+1;}
+                    if ({{post.grade}}==1) {n1=n1+1;}
+                </script>
             </div>
             {% empty %}
             <div class="no-post">
@@ -131,5 +145,84 @@
         <p><span style="color: red;">请先登录！</p>   
     {% endif %} 
     </div>
+    
+<div id='chart'>
+	<head>
+		<meta charset="utf-8"><link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			/* css 代码  */
+		</style>
+		<script src="https://img.highcharts.com.cn/highcharts/highcharts.js"></script>
+		<script src="https://img.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	</head>
+	<body>
+		<div id="container" style="min-width:400px;height:400px"></div>
+		<script>
+			tot=n5+n4+n3+n2+n1;
+			tp=n5*5+n4*4+n3*3+n2*2+n1;
+			avg=tp/tot;
+			<!--document.getElementById("test5");-->
+		</script>
+	</body>
+</div>
+	<script>
+	var chart = Highcharts.chart('container', {
+	chart: {
+		spacing : [40, 0 , 40, 0]
+	},
+	title: {
+		floating:true,
+		text: '评分\t' + avg.toFixed(2)
+	},
+	tooltip: {
+		pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	},
+	plotOptions: {
+		pie: {
+			allowPointSelect: true,
+			cursor: 'pointer',
+			dataLabels: {
+				enabled: true,
+				format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+				style: {
+					color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+				}
+			},
+			point: {
+				events: {
+					mouseOver: function(e) {  
+						chart.setTitle({
+							text: '评分\t' + avg.toFixed(2)
+						});
+					}
+				}
+			},
+		}
+	},
+	series: [{
+		type: 'pie',
+		innerSize: '80%',
+		name: '人数',
+		data: [
+			['5分',   n5],
+			['4分',   n4],
+			['3分',   n3],
+			['2分',   n2],
+			['1分',   n1]
+		]
+	}]
+}, function(c) { // 图表初始化完毕后的会掉函数
+	// 环形图圆心
+	var centerY = c.series[0].center[1],
+		titleHeight = parseInt(c.title.styles.fontSize);
+	// 动态设置标题位置
+	c.setTitle({
+		y:centerY + titleHeight/2
+	});
+});
+</script>
 
+
+    
 {% endblock context %}

@@ -10,8 +10,8 @@
 {% block search %}
     <form method="get" action="/search/">
         {% csrf_token %}
-        <input type="text" placeholder="search" name="index">
-        <button type="submit" name="submit">搜索</button>
+        <input type="text" placeholder="search" name="index" style="height:20px;width:120px">
+        <button type="submit" name="submit" style="height:20px;width:50px;color:white">搜索</button>
     </form>
 {% endblock search %}
 
