@@ -50,15 +50,24 @@
             <div class='hd'>
                 <h2>导演</h2>
             </div>
+            <ul class="celebrities-list from-subject __oneline">
             {% for post in director %}
-            <div>
-                </br><a href="/person/?name={{post.director_name.name}}">{{post.director_name.name}}</a>
-            </div>
+            <li class="celebrity">
+                <a href="/person/?name={{post.director_name.name}}">
+                    <img src="/static/media/{{post.director_name.photo}}">
+                </a>
+                <div class="info">
+                    <span class="name">
+                        <a href="/person/?name={{post.director_name.name}}">{{post.director_name.name}}</a>
+                    </span>
+                </div>
+            </li>
             {% empty %}
             <div class="no-post">
                 暂无
             </div>
             {% endfor %}
+            </ul>
         </div>
         <div id='actor'>
             <div class='hd'>
@@ -104,6 +113,33 @@
             </div>
             {% endfor %}
         </div>
+        
+    </div>
+    <div id='chart'>
+        <head>
+            <meta charset="utf-8"><link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+                #container {
+                position: absolute;
+                right: 75px;
+                top: 100px;
+                width: 350px;
+                height: 350px;
+                }
+            </style>
+            <script src="https://img.highcharts.com.cn/highcharts/highcharts.js"></script>
+            <script src="https://img.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+        </head>
+        <body>
+            <div id="container" style="min-width:400px;height:400px"></div>
+            <script>
+                tot=n5+n4+n3+n2+n1;
+                tp=n5*5+n4*4+n3*3+n2*2+n1;
+                avg=tp/tot;
+                <!--document.getElementById("test5");-->
+            </script>
+        </body>
     </div>
  </form>
     <div id='wrapper'>
@@ -146,30 +182,12 @@
     {% endif %} 
     </div>
     
-<div id='chart'>
-	<head>
-		<meta charset="utf-8"><link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<style>
-			/* css 代码  */
-		</style>
-		<script src="https://img.highcharts.com.cn/highcharts/highcharts.js"></script>
-		<script src="https://img.highcharts.com.cn/highcharts/modules/exporting.js"></script>
-	</head>
-	<body>
-		<div id="container" style="min-width:400px;height:400px"></div>
-		<script>
-			tot=n5+n4+n3+n2+n1;
-			tp=n5*5+n4*4+n3*3+n2*2+n1;
-			avg=tp/tot;
-			<!--document.getElementById("test5");-->
-		</script>
-	</body>
-</div>
+
 	<script>
 	var chart = Highcharts.chart('container', {
 	chart: {
-		spacing : [40, 0 , 40, 0]
+		spacing : [40, 0 , 40, 0],
+        backgroundColor:"",
 	},
 	title: {
 		floating:true,

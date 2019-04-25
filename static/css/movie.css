@@ -23,7 +23,6 @@ h1 {
     text-align: center;
 }
 #headline img {
-    height: 250px;
     width: 175px;
 }
 .info {
@@ -38,6 +37,7 @@ h1 {
     width: 438px;
     word-wrap: break-word;
     overflow: hidden;
+    margin-bottom: 12px;
 }
 #intro, #movie{
     margin-bottom: 25px;
@@ -93,4 +93,17 @@ a{
     color: rgb(119, 103, 103);
     position: relative;
     overflow: visible;
+}
+#celebrities *{
+    box-sizing: border-box;
+}
+.celebrities-list .__oneline li:first-child{
+    margin-left:0;
+}
+.celebrities-list li a img{
+    height:150px;
+}
+.celebrities-list .info{
+    display:block;
+    margin: 6px auto 0;
 }
