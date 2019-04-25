@@ -144,14 +144,14 @@ def check(request):
 def add_comment(request): 
     q = request.GET.get('movie_name')
     p = request.session.get('user_name',None)
+    movie = Movie.objects.get(movie_name=q)   
+    user = User.objects.get(user_name=p)
     grade = request.GET.get('score')
     comment = request.GET.get('comment')
       
     if not comment :
         return redirect('/movie/?movie_name=%s' % (movie.movie_name)) 
-    
-    movie = Movie.objects.get(movie_name=q)   
-    user = User.objects.get(user_name=p)
+     
     Comment.objects.create(movie_name=movie,user_name=user,grade=grade,comment=comment)
     
     return redirect('/movie/?movie_name=%s' % (movie.movie_name)) 

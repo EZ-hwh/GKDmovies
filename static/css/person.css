@@ -26,11 +26,7 @@ h1 {
     height: 250px;
     width: 175px;
 }
-.info {
-    float: left;
-    text-align: left;
-    line-height: 22px;
-}
+
 .info ul {
     margin-left: 20px;
 }
