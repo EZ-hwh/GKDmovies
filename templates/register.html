@@ -7,10 +7,10 @@
 	</br><input type="text" placeholder="user" name="user" style="height:25px;width:150px;position:relative;top:80px;left:500px;">
 	</br><input type="password" placeholder="password" name="password" style="height:25px;width:150px;position:relative;top:100px;left:500px;">
     </br><input type="password" placeholder="repeat password" name="password2" style="height:25px;width:150px;position:relative;top:120px;left:500px;">
-	</br><button type="submit" name="submit" style="height:30px;width:150px;position:relative;top:120px;left:-640px;font-size:20px">register</button>
+	</br><button type="submit" name="submit" style="height:30px;width:80px;position:relative;top:120px;left:-780px;font-size:20px; background-color: rgb(187, 187, 235);">Register</button>
     </br><div><span style="height:25px;width:50px;position:relative;top:170px;left:515px;color:red;">{{ message }}</div>  
     {% if success %}
-        <meta http-equiv="refresh" content="1; url='/login/'"> 
+        <meta http-equiv="refresh" content="1; url='/login/'>
     {% endif %}    
 </form>
 {% endblock context %}

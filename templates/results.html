@@ -30,18 +30,28 @@
       <div class='title'>
         <a href="/person/?name={{post.name}}">{{post.name}}</a>
       </div>
-      <div class='info'>
-        性别：  {{post.gender}}
-      </div>
-      <div class='info'>
-        出生年月：  {{post.birthdate}}
-      </div>
-      <div class='info'>
-        职业：  {{post.occupation}}
-      </div>
-      <div class='info'>
 
+      {% if post.gender == 'm' %}
+      <div class='info'>
+          性别：  男
       </div>
+      {% endif %}
+      {% if post.gender == 'f' %}
+      <div class='info'>
+          性别：  女
+      </div>
+      {% endif %}
+      {% if not post.birthdate == '' %}
+      <div class='info'>
+          出生年月：  {{post.birthdate}}
+      </div>
+      {% endif %}
+      {% if not post.birthdate == '' %}
+      <div class='info'>
+          职业：  {{post.occupation}}
+      </div>
+      {% endif %}
+      
     </div>
   </div>
   {% empty %}

@@ -5,9 +5,11 @@
     {% csrf_token %}
 	</br><input type="text" placeholder="user" name="user" style="height:25px;width:150px;position:relative;top:100px;left:500px;">
 	</br><input type="password" placeholder="password" name="password" style="height:25px;width:150px;position:relative;top:120px;left:500px;">
-    </br><button type="submit" name="submit" style="height:30px;width:50px;position:relative;top:130px;left:-740px;font-size:20px">login</button>
-	</br><div><span style="height:25px;width:150px;position:relative;top:132px;left:580px;font-size:20px"><a href="/register" style="text-decoration:none;color:rgb(13,20,78);">register</a></div> 
-    </br><div><span style="height:25px;width:50px;position:relative;top:140px;left:515px;color:red;">{{ message }}</div>   
+    </br><button type="submit" name="submit" style="padding:4px;height:30px;width:50px;display: inline-block;position:relative;top:135px;left:-815px;font-size:20px;margin-top:20px;background-color: rgb(187, 187, 235);">login</button>
+    </br><div><span style="padding:10px;height:30px;width:50px;display: inline-block;position:relative;top:130px;left:565px;font-size:20px">
+        <a href="/register" style="font-size: 21px;padding:4px;text-decoration:none;color:rgb(13,20,78);margin-top:18px;background-color: rgb(187, 187, 235);">register</a>
+    </div> 
+    </br><div><span style="height:40px;width:500px;display: inline-block;position:relative;top:130px;left:515px;color:red;">{{ message }}</div>   
     {% if success %}
         <meta http-equiv="refresh" content="1; url='/'"> 
     {% endif %}      

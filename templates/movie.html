@@ -60,15 +60,26 @@
                     <div class='title'>
                         <a href="/person/?name={{post.director_name.name}}">{{post.director_name.name}}</a>
                     </div>
+                    {% if post.director_name.gender == 'm' %}
                     <div class='info'>
-                        性别：  {{post.director_name.gender}}
+                        性别：  男
                     </div>
+                    {% endif %}
+                    {% if post.director_name.gender == 'f' %}
+                    <div class='info'>
+                        性别：  女
+                    </div>
+                    {% endif %}
+                    {% if not post.director_name.birthdate == '' %}
                     <div class='info'>
                         出生年月：  {{post.director_name.birthdate}}
                     </div>
+                    {% endif %}
+                    {% if not post.director_name.birthdate == '' %}
                     <div class='info'>
                         职业：  {{post.director_name.occupation}}
                     </div>
+                    {% endif %}
                 </div>
                 </div>
             {% empty %}
@@ -91,15 +102,26 @@
                     <div class='title'>
                         <a href="/person/?name={{post.actor_name.name}}">{{post.actor_name.name}}</a>
                     </div>
+                    {% if post.actor_name.gender == 'm' %}
                     <div class='info'>
-                        性别：  {{post.actor_name.gender}}
+                        性别：  男
                     </div>
+                    {% endif %}
+                    {% if post.actor_name.gender == 'f' %}
+                    <div class='info'>
+                        性别：  女
+                    </div>
+                    {% endif %}
+                    {% if not post.actor_name.birthdate == '' %}
                     <div class='info'>
                         出生年月：  {{post.actor_name.birthdate}}
                     </div>
+                    {% endif %}
+                    {% if not post.actor_name.birthdate == '' %}
                     <div class='info'>
                         职业：  {{post.actor_name.occupation}}
                     </div>
+                    {% endif %}
                 </div>
                 </div>
             {% empty %}
@@ -121,9 +143,15 @@
             </script>
             {% for post in comment %}
             <div class="comment">
-                </br><p>{{post.user_name.user_name}}</p>
-                </br><p>{{post.grade}}</p>
-                </br><p>{{post.comment}}</p>
+                <div class="user">
+                    <div class="user_name">
+                        用户名： {{post.user_name.user_name}}
+                    </div>
+                    <div class="grade">
+                        评分： {{post.grade}}
+                    </div>
+                </div>
+                <div class="com">{{post.comment}}</div>
                 <script>
                     if ({{post.grade}}==5) {n5=n5+1;}
                     if ({{post.grade}}==4) {n4=n4+1;}
@@ -181,7 +209,7 @@
             <label><input name="score" type="radio" value=1 />1 </label> 
             </br><textarea rows="10" cols="90" placeholder="请在此输入评论" name="comment"></textarea>
             <input type="text" name="movie_name" style="display:none" value='{{movie.movie_name}}'></input>
-            <button type="submit" name="submit" style="border:2px; border-color:black;">提交</button>
+            <button type="submit" name="submit" style="background-color: white; display: inline-block; width:50px; height:30px; border-color:black;">提交</button>
         </form>
         {% else %}
         <div class='hd'>
@@ -195,11 +223,11 @@
             <label><input name="score" type="radio" value=1 />1 </label>
             </br><textarea rows="10" cols="90" name="comment">{{uc.comment}}</textarea>
             <input type="text" name="movie_name" style="display:none" value='{{movie.movie_name}}'></input>
-            <button type="submit" name="submit" style="border:2px; border-color:black;">修改</button>
+            <button type="submit" name="submit" style="background-color: white; display: inline-block; width:50px; height:30px; border-color:black;">修改</button>
         </form>
         <form action="/delete_comment/",method='get'>
             <input type="text" name="movie_name" style="display:none" value='{{movie.movie_name}}'></input>
-            <button type="submit" name="submit">删除</button>
+            <button type="submit" name="submit" style="background-color: white; display: inline-block; width:50px; height:30px; border-color:black; margin-top: -75px;">删除</button>
         </form>
         {% endif %}
     {% else %}

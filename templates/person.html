@@ -25,10 +25,21 @@
             </div>
             <div class='info'>
             <ul>
-                <li>性别： {{person.gender}} </li>
+                {% if person.gender == 'm' %}
+                <li>性别：  男</li>
+                {% endif %}
+                {% if person.gender == 'f' %}
+                <li>性别：  女</li>
+                {% endif %}
+                {% if not person.birthdate == '' %}
                 <li>出生日期：{{person.birthdate}}</li>
+                {% endif %}
+                {% if not person.constelliation == '' %}
                 <li>星座：{{person.constellation}}</li>
-                <li>籍贯：{{person.birthplace}}</li>
+                {% endif %}
+                {% if not person. == '' %}
+                <li>出生地：{{person.birthplace}}</li>
+                {% endif %}
                 <li>职业：{{person.occupation}}</li>
             </ul>
             </div>
